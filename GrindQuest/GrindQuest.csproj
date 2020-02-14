@@ -169,7 +169,8 @@
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDbActionsRepo.cs" />
+    <Compile Include="Interfaces\IItemsAndInventoryLogic.cs" />
+    <Compile Include="Interfaces\IDbActionsRepo.cs" />
     <Compile Include="ItemsAndInventoryLogic.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
@@ -213,9 +214,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="InitialiserDatabases\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -291,6 +291,7 @@
             this.SelectionOneButton.TabIndex = 6;
             this.SelectionOneButton.Text = "button1";
             this.SelectionOneButton.UseVisualStyleBackColor = true;
+            this.SelectionOneButton.Click += new System.EventHandler(this.SelectionOneButton_Click);
             // 
             // SelectionTwoButton
             // 

@@ -10,8 +10,8 @@ namespace GrindQuest
     public interface IDbActionsRepo
     {
         void InsertItemToItemsMasterDb(Item item);
+        void ModifyItemInItemsMasterDb(string itemName, string valueToUpdate, Object newValue);
         void RemoveItemFromItemsMasterDb(string itemName);
-        void UpdateMaxStackValueOfItemInItemsMasterDb(string itemName, int newMaxStackSize);
         void Save();
     }
 }

@@ -31,21 +31,39 @@ namespace GrindQuest
                 }
             }
         }
-        public void UpdateMaxStackValueOfItemInItemsMasterDb(string itemName, int newMaxStackSize)
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+
+        public void ModifyItemInItemsMasterDb(string itemName, string valueToUpdate, Object newValue)
         {
             List<Item> itemList = context.ItemsMasterTable.ToList();
             foreach (Item i in itemList)
             {
                 if (i.ItemName == itemName)
                 {
-                    i.ItemMaxStack = newMaxStackSize;
+                    if (newValue.GetType() == typeof(string))
+                    {
+                        if (valueToUpdate == "ItemName")
+                        {
+                            i.ItemName = newValue.ToString();
+                        }
+                        else if (valueToUpdate == "ItemEffect")
+                        {
+                            i.ItemEffect = newValue.ToString();
+                        }
+                        else if (valueToUpdate == "ItemType")
+                        {
+                            i.ItemType = newValue.ToString();
+                        }
+                    }
+                    else if (newValue.GetType() == typeof(int))
+                    {
+                        i.ItemMaxStack = (Int32)newValue;
+                    }
                 }
             }
-        }
-
-        public void Save()
-        {
-            context.SaveChanges();
         }
     }
 }
