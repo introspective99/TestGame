@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,8 @@ namespace GrindQuest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameWindow());
+            IItemsAndInventoryLogic _itemsAndInventoryLogic = new ItemsAndInventoryLogic(new DbActionsRepo(new GameDbContext()));
+            Application.Run(new GameWindow(_itemsAndInventoryLogic));
         }
     }
 }

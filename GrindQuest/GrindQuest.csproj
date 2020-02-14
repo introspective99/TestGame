@@ -171,6 +171,12 @@
     </Compile>
     <Compile Include="Interfaces\IItemsAndInventoryLogic.cs" />
     <Compile Include="Interfaces\IDbActionsRepo.cs" />
+    <Compile Include="InventoryDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDisplayForm.Designer.cs">
+      <DependentUpon>InventoryDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemsAndInventoryLogic.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
@@ -190,6 +196,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDisplayForm.resx">
+      <DependentUpon>InventoryDisplayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
