@@ -33,10 +33,10 @@
             this.downButton = new System.Windows.Forms.Button();
             this.upButton = new System.Windows.Forms.Button();
             this.displayBox = new System.Windows.Forms.TextBox();
-            this.selectionOneButton = new System.Windows.Forms.Button();
-            this.selectionTwoButton = new System.Windows.Forms.Button();
-            this.selectionThreeButton = new System.Windows.Forms.Button();
-            this.selectionFourButton = new System.Windows.Forms.Button();
+            this.SelectionOneButton = new System.Windows.Forms.Button();
+            this.SelectionTwoButton = new System.Windows.Forms.Button();
+            this.SelectionThreeButton = new System.Windows.Forms.Button();
+            this.SelectionFourButton = new System.Windows.Forms.Button();
             this.aOne = new System.Windows.Forms.PictureBox();
             this.aTen = new System.Windows.Forms.PictureBox();
             this.aNine = new System.Windows.Forms.PictureBox();
@@ -283,41 +283,44 @@
             this.displayBox.Size = new System.Drawing.Size(573, 439);
             this.displayBox.TabIndex = 5;
             // 
-            // selectionOneButton
+            // SelectionOneButton
             // 
-            this.selectionOneButton.Location = new System.Drawing.Point(253, 463);
-            this.selectionOneButton.Name = "selectionOneButton";
-            this.selectionOneButton.Size = new System.Drawing.Size(332, 33);
-            this.selectionOneButton.TabIndex = 6;
-            this.selectionOneButton.Text = "button1";
-            this.selectionOneButton.UseVisualStyleBackColor = true;
+            this.SelectionOneButton.Location = new System.Drawing.Point(253, 463);
+            this.SelectionOneButton.Name = "SelectionOneButton";
+            this.SelectionOneButton.Size = new System.Drawing.Size(332, 33);
+            this.SelectionOneButton.TabIndex = 6;
+            this.SelectionOneButton.Text = "button1";
+            this.SelectionOneButton.UseVisualStyleBackColor = true;
             // 
-            // selectionTwoButton
+            // SelectionTwoButton
             // 
-            this.selectionTwoButton.Location = new System.Drawing.Point(253, 502);
-            this.selectionTwoButton.Name = "selectionTwoButton";
-            this.selectionTwoButton.Size = new System.Drawing.Size(332, 33);
-            this.selectionTwoButton.TabIndex = 7;
-            this.selectionTwoButton.Text = "button2";
-            this.selectionTwoButton.UseVisualStyleBackColor = true;
+            this.SelectionTwoButton.Location = new System.Drawing.Point(253, 502);
+            this.SelectionTwoButton.Name = "SelectionTwoButton";
+            this.SelectionTwoButton.Size = new System.Drawing.Size(332, 33);
+            this.SelectionTwoButton.TabIndex = 7;
+            this.SelectionTwoButton.Text = "button2";
+            this.SelectionTwoButton.UseVisualStyleBackColor = true;
+            this.SelectionTwoButton.Click += new System.EventHandler(this.SelectionTwoButton_Click);
             // 
-            // selectionThreeButton
+            // SelectionThreeButton
             // 
-            this.selectionThreeButton.Location = new System.Drawing.Point(253, 541);
-            this.selectionThreeButton.Name = "selectionThreeButton";
-            this.selectionThreeButton.Size = new System.Drawing.Size(332, 33);
-            this.selectionThreeButton.TabIndex = 8;
-            this.selectionThreeButton.Text = "button3";
-            this.selectionThreeButton.UseVisualStyleBackColor = true;
+            this.SelectionThreeButton.Location = new System.Drawing.Point(253, 541);
+            this.SelectionThreeButton.Name = "SelectionThreeButton";
+            this.SelectionThreeButton.Size = new System.Drawing.Size(332, 33);
+            this.SelectionThreeButton.TabIndex = 8;
+            this.SelectionThreeButton.Text = "button3";
+            this.SelectionThreeButton.UseVisualStyleBackColor = true;
+            this.SelectionThreeButton.Click += new System.EventHandler(this.SelectionThreeButton_Click);
             // 
-            // selectionFourButton
+            // SelectionFourButton
             // 
-            this.selectionFourButton.Location = new System.Drawing.Point(253, 580);
-            this.selectionFourButton.Name = "selectionFourButton";
-            this.selectionFourButton.Size = new System.Drawing.Size(332, 33);
-            this.selectionFourButton.TabIndex = 9;
-            this.selectionFourButton.Text = "button4";
-            this.selectionFourButton.UseVisualStyleBackColor = true;
+            this.SelectionFourButton.Location = new System.Drawing.Point(253, 580);
+            this.SelectionFourButton.Name = "SelectionFourButton";
+            this.SelectionFourButton.Size = new System.Drawing.Size(332, 33);
+            this.SelectionFourButton.TabIndex = 9;
+            this.SelectionFourButton.Text = "button4";
+            this.SelectionFourButton.UseVisualStyleBackColor = true;
+            this.SelectionFourButton.Click += new System.EventHandler(this.SelectionFourButton_Click);
             // 
             // aOne
             // 
@@ -1119,7 +1122,7 @@
             this.pictureBox110.TabIndex = 65;
             this.pictureBox110.TabStop = false;
             // 
-            // gameWindow
+            // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1224,17 +1227,17 @@
             this.Controls.Add(this.aNine);
             this.Controls.Add(this.aTen);
             this.Controls.Add(this.aOne);
-            this.Controls.Add(this.selectionFourButton);
-            this.Controls.Add(this.selectionThreeButton);
-            this.Controls.Add(this.selectionTwoButton);
-            this.Controls.Add(this.selectionOneButton);
+            this.Controls.Add(this.SelectionFourButton);
+            this.Controls.Add(this.SelectionThreeButton);
+            this.Controls.Add(this.SelectionTwoButton);
+            this.Controls.Add(this.SelectionOneButton);
             this.Controls.Add(this.displayBox);
             this.Controls.Add(this.upButton);
             this.Controls.Add(this.downButton);
             this.Controls.Add(this.rightButton);
             this.Controls.Add(this.leftButton);
-            this.Name = "gameWindow";
-            this.Text = "Form1";
+            this.Name = "GameWindow";
+            this.Text = "GrindQuest - Alpha";
             ((System.ComponentModel.ISupportInitialize)(this.aOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aNine)).EndInit();
@@ -1346,10 +1349,10 @@
         private System.Windows.Forms.Button downButton;
         private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.TextBox displayBox;
-        private System.Windows.Forms.Button selectionOneButton;
-        private System.Windows.Forms.Button selectionTwoButton;
-        private System.Windows.Forms.Button selectionThreeButton;
-        private System.Windows.Forms.Button selectionFourButton;
+        private System.Windows.Forms.Button SelectionOneButton;
+        private System.Windows.Forms.Button SelectionTwoButton;
+        private System.Windows.Forms.Button SelectionThreeButton;
+        private System.Windows.Forms.Button SelectionFourButton;
         private System.Windows.Forms.PictureBox aOne;
         private System.Windows.Forms.PictureBox aTen;
         private System.Windows.Forms.PictureBox aNine;

@@ -11,6 +11,6 @@ namespace GrindQuest.ObjectModels
         public int PlayerCharID { get; set; }
         public string PlayerCharName { get; set; }
         public int PlayerCharSpec { get; set; }
-        public int InventorySize { get; set; }
+        //public Inventory PlayerInventory { get; set; }
     }
 }

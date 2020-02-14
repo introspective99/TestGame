@@ -12,6 +12,7 @@ namespace GrindQuest
 {
     public partial class GameWindow : Form
     {
+        readonly ItemsAndInventoryLogic itemLogic = new ItemsAndInventoryLogic();
         public GameWindow()
         {
             InitializeComponent();
@@ -19,6 +20,18 @@ namespace GrindQuest
             rightButton.Text = "\u2192";
             upButton.Text = "\u2191";
             downButton.Text = "\u2193";
+        }
+        private void SelectionThreeButton_Click(object sender, EventArgs e)
+        {
+            itemLogic.CreateItemAndInsertIntoItemsMasterDbAndSaveChanges(1, "Health Potion", "HP +10", "Consumable");
+        }
+        private void SelectionFourButton_Click(object sender, EventArgs e)
+        {
+            itemLogic.FindAndRemoveItemFromItemsMasterDbAndSaveChanges("Health Potion");
+        }
+        private void SelectionTwoButton_Click(object sender, EventArgs e)
+        {
+            itemLogic.FindItemAndUpdateMaxStackValueAndSaveChanges("Health Potion", 3);
         }
     }
 }

@@ -11,8 +11,7 @@ namespace GrindQuest
     public class GameDbContext : DbContext 
     {
         public DbSet<PlayerChar> PlayerChars { get; set; }
-        public DbSet<Inventory> PlayerInventory { get; set; }
-
+        public DbSet<Item> ItemsMasterTable { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder

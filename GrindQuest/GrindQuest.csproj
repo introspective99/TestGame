@@ -162,23 +162,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbActionsRepo.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="IDbActionsRepo.cs" />
+    <Compile Include="ItemsAndInventoryLogic.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
       <DependentUpon>20200213165807_CreateTable_PlayerChars.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200214131100_CreateTable_ItemsMaster.cs" />
+    <Compile Include="Migrations\20200214131100_CreateTable_ItemsMaster.designer.cs">
+      <DependentUpon>20200214131100_CreateTable_ItemsMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />
+    <Compile Include="ObjectModels\InventorySlot.cs" />
     <Compile Include="ObjectModels\Item.cs" />
     <Compile Include="ObjectModels\PlayerChar.cs" />
     <Compile Include="GameDbContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -203,8 +214,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositories\" />
+    <Folder Include="InitialiserDatabases\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
