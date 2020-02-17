@@ -162,7 +162,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbActionsRepo.cs" />
+    <Compile Include="Interfaces\IItemsMasterDbActionsRepo.cs" />
+    <Compile Include="DbRepositories\ItemsMasterDbActionsRepo.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,9 +183,9 @@
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
       <DependentUpon>20200213165807_CreateTable_PlayerChars.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20200214131100_CreateTable_ItemsMaster.cs" />
-    <Compile Include="Migrations\20200214131100_CreateTable_ItemsMaster.designer.cs">
-      <DependentUpon>20200214131100_CreateTable_ItemsMaster.cs</DependentUpon>
+    <Compile Include="Migrations\20200215013122_InitHomeDatabase.cs" />
+    <Compile Include="Migrations\20200215013122_InitHomeDatabase.designer.cs">
+      <DependentUpon>20200215013122_InitHomeDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />

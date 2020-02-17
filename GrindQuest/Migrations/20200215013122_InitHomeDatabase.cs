@@ -2,7 +2,7 @@
 
 namespace GrindQuest.Migrations
 {
-    public partial class CreateTable_ItemsMaster : Migration
+    public partial class InitHomeDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,7 @@ namespace GrindQuest.Migrations
                 {
                     ItemID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    MyProperty = table.Column<int>(nullable: false),
                     ItemMaxStack = table.Column<int>(nullable: false),
                     ItemName = table.Column<string>(nullable: true),
                     ItemEffect = table.Column<string>(nullable: true),

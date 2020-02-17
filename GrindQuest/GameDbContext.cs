@@ -18,7 +18,9 @@ namespace GrindQuest
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Data Source=.\Asura;Initial Catalog=GrindQuestDb;Integrated Security=True");
+               // .UseSqlServer(@"Data Source=.\Asura;Initial Catalog=GrindQuestDb;Integrated Security=True");
+                .UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=GrindQuestDb;Integrated Security=True");
+
         }
     }
 }

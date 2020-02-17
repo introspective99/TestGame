@@ -1,17 +1,19 @@
 ﻿using GrindQuest.ObjectModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GrindQuest
 {
-    public class DbActionsRepo : IDbActionsRepo
+    public class ItemsMasterDbActionsRepo : IItemsMasterDbActionsRepo
     {
         //Injects the GameDbContext into the actionsRepo so I can create methods for EF without needing a new instance of the DbContext.
         private readonly GameDbContext context;
-        public DbActionsRepo(GameDbContext context)
+        public ItemsMasterDbActionsRepo(GameDbContext context)
         {
             this.context = context;
         }
@@ -39,13 +41,16 @@ namespace GrindQuest
         {
             context.SaveChanges();
         }
+
         //Nice method that finds and modifies any specified value in and specified column, could use this methodology to 
         //make a table-non-specific method as well, but might be too cluttered for one method.
-        public void ModifyItemInItemsMasterDb(string itemName, string valueToUpdate, Object newValue)
+        public void ModifyItemInItemsMasterDb(string)
         {
-            List<Item> itemList = context.ItemsMasterTable.ToList();
-            foreach (Item i in itemList)
+            }
+
+            /*foreach (Item i in itemList)
             {
+                
                 if (i.ItemName == itemName)
                 {
                     if (newValue.GetType() == typeof(string))
@@ -67,8 +72,8 @@ namespace GrindQuest
                     {
                         i.ItemMaxStack = (Int32)newValue;
                     }
-                }
-            }
+                }*/
+        }
         }
     }
-}
+

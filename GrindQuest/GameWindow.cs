@@ -37,7 +37,7 @@ namespace GrindQuest
         }
         private void SelectionThreeButton_Click(object sender, EventArgs e)
         {
-
+            _itemsAndInventoryLogic.ModifyItemInItemsMasterDb("ItemEffect", "Increases Basic Attack Damage by 3 for 3 turns", "Increases Basic Attack Damage by 2 for 3 turns");
         }
         private void SelectionFourButton_Click(object sender, EventArgs e)
         {

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GrindQuest.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    [Migration("20200214131100_CreateTable_ItemsMaster")]
-    partial class CreateTable_ItemsMaster
+    [Migration("20200215013122_InitHomeDatabase")]
+    partial class InitHomeDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,9 @@ namespace GrindQuest.Migrations
 
                     b.Property<string>("ItemType")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MyProperty")
+                        .HasColumnType("int");
 
                     b.HasKey("ItemID");
 

@@ -65,15 +65,20 @@ namespace GrindQuest
             string StrengthPotion = "Strength Potion";
             string PepsiMax = "Pepsi Max";
 
-            /*ItemsToRemove.Add(HealthPotion);
+            ItemsToRemove.Add(HealthPotion);
             ItemsToRemove.Add(StrengthPotion);
-            ItemsToRemove.Add(PepsiMax);*/
+            ItemsToRemove.Add(PepsiMax);
 
             foreach(var i in ItemsToRemove)
             {
                 _dbActionsRepo.RemoveItemFromItemsMasterDb(i);
             }
             _dbActionsRepo.Save();
+        }
+
+        public void ModifyItemInItemsMasterDb(string columnToUpdate, string entryToFind, object newValue)
+        {
+            _dbActionsRepo.ModifyItemInItemsMasterDb(columnToUpdate, entryToFind, newValue);
         }
     }
 }

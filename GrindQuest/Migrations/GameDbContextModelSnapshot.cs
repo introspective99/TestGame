@@ -37,6 +37,9 @@ namespace GrindQuest.Migrations
                     b.Property<string>("ItemType")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("MyProperty")
+                        .HasColumnType("int");
+
                     b.HasKey("ItemID");
 
                     b.ToTable("ItemsMasterTable");

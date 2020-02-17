@@ -17,7 +17,7 @@ namespace GrindQuest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IItemsAndInventoryLogic _itemsAndInventoryLogic = new ItemsAndInventoryLogic(new DbActionsRepo(new GameDbContext()));
+            IItemsAndInventoryLogic _itemsAndInventoryLogic = new ItemsAndInventoryLogic(new ItemsMasterDbActionsRepo(new GameDbContext()));
             Application.Run(new GameWindow(_itemsAndInventoryLogic));
         }
     }

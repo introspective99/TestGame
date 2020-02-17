@@ -10,7 +10,7 @@ namespace GrindQuest
     public interface IDbActionsRepo
     {
         void InsertItemToItemsMasterDb(Item item);
-        void ModifyItemInItemsMasterDb(string itemName, string valueToUpdate, Object newValue);
+        void ModifyItemInItemsMasterDb(Type objectToUpdate, string columnToUpdate, string identifierValue, Object newValue);
         void RemoveItemFromItemsMasterDb(string itemName);
         void Save();
     }
