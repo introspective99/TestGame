@@ -29,15 +29,15 @@ namespace GrindQuest
         //mostly using these buttons to test functionalities.
         private void SelectionOneButton_Click(object sender, EventArgs e)
         {
-            _itemsAndInventoryLogic.AddItemsToItemsMasterTable();
+            _itemsAndInventoryLogic.AddTestItemsToItemsMasterTable();
         }
         private void SelectionTwoButton_Click(object sender, EventArgs e)
         {
-            _itemsAndInventoryLogic.RemoveItemsFromItemsMasterTable();
+            //_itemsAndInventoryLogic.RemoveItemByItemIdFromItemsMasterTable();
         }
         private void SelectionThreeButton_Click(object sender, EventArgs e)
         {
-            _itemsAndInventoryLogic.ModifyItemInItemsMasterDb("ItemEffect", "Increases Basic Attack Damage by 3 for 3 turns", "Increases Basic Attack Damage by 2 for 3 turns");
+            _itemsAndInventoryLogic.ModifyItemByItemIdFromItemsMasterTable(23, "ItemName", "Test Worked");
         }
         private void SelectionFourButton_Click(object sender, EventArgs e)
         {

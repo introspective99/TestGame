@@ -171,7 +171,6 @@
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IItemsAndInventoryLogic.cs" />
-    <Compile Include="Interfaces\IDbActionsRepo.cs" />
     <Compile Include="InventoryDisplayForm.cs">
       <SubType>Form</SubType>
     </Compile>

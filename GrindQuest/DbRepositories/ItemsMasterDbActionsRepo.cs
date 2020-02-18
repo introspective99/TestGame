@@ -23,57 +23,36 @@ namespace GrindQuest
         {
             context.ItemsMasterTable.Add(item);
         }
-
-        //again self explanatory, pulls from the table and removes whatever you tell it to remove.
-        public void RemoveItemFromItemsMasterDb(string itemName)
+        //Fetches an Item from the ItemsMasterDb that has the specified ItemId, mostly for use by other methods.
+        public Item GetItemById(int itemId)
         {
-            List<Item> itemList = context.ItemsMasterTable.ToList();
-            foreach(Item i in itemList)
+            return context.ItemsMasterTable.FirstOrDefault(p => p.ItemID == itemId);
+        }
+        public void RemoveItemFromItemsMasterDb(int itemId)
+        {
+            context.ItemsMasterTable.Remove(GetItemById(itemId));
+        }
+        
+        public void ModifyItemByItemIdFromItemsMasterDb(int itemId, string nameOfColumnToUpdate, Object newValue)
+        {
+            var foundEntry = GetItemById(itemId);
+            foreach(var prop in foundEntry.GetType().GetProperties())
             {
-                if(i.ItemName == itemName)
+                if(prop.Name == nameOfColumnToUpdate)
                 {
-                    context.ItemsMasterTable.Remove(i);
+                    prop.SetValue(foundEntry, newValue);
                 }
             }
         }
+
+        //again self explanatory, pulls from the table and removes whatever you tell it to remove.
+
         //not sure I need to explain this one.
         public void Save()
         {
             context.SaveChanges();
         }
-
-        //Nice method that finds and modifies any specified value in and specified column, could use this methodology to 
-        //make a table-non-specific method as well, but might be too cluttered for one method.
-        public void ModifyItemInItemsMasterDb(string)
-        {
-            }
-
-            /*foreach (Item i in itemList)
-            {
-                
-                if (i.ItemName == itemName)
-                {
-                    if (newValue.GetType() == typeof(string))
-                    {
-                        if (valueToUpdate == "ItemName")
-                        {
-                            i.ItemName = newValue.ToString();
-                        }
-                        else if (valueToUpdate == "ItemEffect")
-                        {
-                            i.ItemEffect = newValue.ToString();
-                        }
-                        else if (valueToUpdate == "ItemType")
-                        {
-                            i.ItemType = newValue.ToString();
-                        }
-                    }
-                    else if (newValue.GetType() == typeof(int))
-                    {
-                        i.ItemMaxStack = (Int32)newValue;
-                    }
-                }*/
-        }
-        }
     }
+}
+
 

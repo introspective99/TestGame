@@ -4,9 +4,9 @@ namespace GrindQuest
 {
     public interface IItemsAndInventoryLogic
     {
-        void AddItemsToItemsMasterTable();
-        void RemoveItemsFromItemsMasterTable();
-        void ModifyItemInItemsMasterDb(string columnToUpdate, string entryToFind, Object newValue);
+        void AddTestItemsToItemsMasterTable();
+        void RemoveItemByItemIdFromItemsMasterTable(int itemId);
+        void ModifyItemByItemIdFromItemsMasterTable(int itemId, string nameOfColumnToUpdate, Object newValue);
 
     }
 }

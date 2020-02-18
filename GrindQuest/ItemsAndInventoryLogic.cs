@@ -11,17 +11,17 @@ namespace GrindQuest
     public class ItemsAndInventoryLogic : IItemsAndInventoryLogic
     {
         //dependency injecting the DbActionsRepo so I don't have to initialise any other classes.
-        private readonly IDbActionsRepo _dbActionsRepo;
-        public ItemsAndInventoryLogic(IDbActionsRepo actionsRepo)
+        private readonly IItemsMasterDbActionsRepo _ItemsMasterDbActionsRepo;
+        public ItemsAndInventoryLogic(IItemsMasterDbActionsRepo actionsRepo)
         {
-            _dbActionsRepo = actionsRepo;
+            _ItemsMasterDbActionsRepo = actionsRepo;
         }
 
         //group of Items to Add or Remove from the ItemsMasterTable
         public List<Item> ItemsToAdd = new List<Item>();
         public List<string> ItemsToRemove = new List<string>();
 
-        public void AddItemsToItemsMasterTable()
+        public void AddTestItemsToItemsMasterTable()
         {
             //some example items added for testing
             Item HealthPotion = new Item()
@@ -53,12 +53,24 @@ namespace GrindQuest
             //succesful usage of the DbActionsRepo methods to do EF work.
             foreach(Item i in ItemsToAdd)
             {
-                _dbActionsRepo.InsertItemToItemsMasterDb(i);
+                _ItemsMasterDbActionsRepo.InsertItemToItemsMasterDb(i);
             }
-            _dbActionsRepo.Save();
+            _ItemsMasterDbActionsRepo.Save();
         }
 
-        //again just more examples to clean up what the previous method adds to the datatbase until I start adding items for real.
+        public void RemoveItemByItemIdFromItemsMasterTable(int itemId)
+        {
+            _ItemsMasterDbActionsRepo.RemoveItemFromItemsMasterDb(itemId);
+            _ItemsMasterDbActionsRepo.Save();
+        }
+
+        public void ModifyItemByItemIdFromItemsMasterTable(int itemId, string nameOfColumnToUpdate, Object newValue)
+        {
+            _ItemsMasterDbActionsRepo.ModifyItemByItemIdFromItemsMasterDb(itemId, nameOfColumnToUpdate, newValue);
+            _ItemsMasterDbActionsRepo.Save();
+        }
+
+        /*again just more examples to clean up what the previous method adds to the datatbase until I start adding items for real. (obselete now)
         public void RemoveItemsFromItemsMasterTable()
         {
             string HealthPotion = "Health Potion";
@@ -74,11 +86,6 @@ namespace GrindQuest
                 _dbActionsRepo.RemoveItemFromItemsMasterDb(i);
             }
             _dbActionsRepo.Save();
-        }
-
-        public void ModifyItemInItemsMasterDb(string columnToUpdate, string entryToFind, object newValue)
-        {
-            _dbActionsRepo.ModifyItemInItemsMasterDb(columnToUpdate, entryToFind, newValue);
-        }
+        }*/
     }
 }
