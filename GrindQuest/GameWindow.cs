@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrindQuest.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,16 @@ namespace GrindQuest
     {
         //haven't figured out how to inject this class without initialising it in the Program.Main() method yet. Doing it in main() only initialises it
         //once in the lifetime of the program so I can kind of deal with that.
-        private readonly IItemsAndInventoryLogic _itemsAndInventoryLogic;
-        public GameWindow(IItemsAndInventoryLogic itemsAndInventoryLogic)
+        private readonly IItemsLogic _itemsLogic;
+        private readonly IArmourLogic _armourLogic;
+        public GameWindow(IItemsLogic itemsLogic, IArmourLogic armourLogic)
+        {
+            this._itemsLogic = itemsLogic;
+            this._armourLogic = armourLogic;
+        }
+        public GameWindow()
         {
             InitializeComponent();
-            this._itemsAndInventoryLogic = itemsAndInventoryLogic;
 
             //you can't actually dictate unicode in the designer properties box so have to do it via code which is what this is.
             leftButton.Text = "\u2190";
@@ -29,7 +35,7 @@ namespace GrindQuest
         //mostly using these buttons to test functionalities.
         private void SelectionOneButton_Click(object sender, EventArgs e)
         {
-            _itemsAndInventoryLogic.AddTestItemsToItemsMasterTable();
+            _itemsLogic.AddTestItemsToItemsMasterTable();
         }
         private void SelectionTwoButton_Click(object sender, EventArgs e)
         {
@@ -37,7 +43,7 @@ namespace GrindQuest
         }
         private void SelectionThreeButton_Click(object sender, EventArgs e)
         {
-            _itemsAndInventoryLogic.ModifyItemByItemIdFromItemsMasterTable(23, "ItemName", "Test Worked");
+
         }
         private void SelectionFourButton_Click(object sender, EventArgs e)
         {

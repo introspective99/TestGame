@@ -2,7 +2,7 @@
 
 namespace GrindQuest
 {
-    public interface IItemsAndInventoryLogic
+    public interface IItemsLogic
     {
         void AddTestItemsToItemsMasterTable();
         void RemoveItemByItemIdFromItemsMasterTable(int itemId);

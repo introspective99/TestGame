@@ -8,10 +8,9 @@ namespace GrindQuest.ObjectModels
 {
     public class InventorySlot
     {
-        public int InventorySlotID { get; set; }
-        public int InventoryOwnerID { get; set; }
-        public bool OccupiedTrueOrFalse { get; set; }
-        public int ItemID { get; set; }
-        
+        public int InventorySlotId { get; set; }
+        public int ParentInventoryId { get; set; }
+        public int ItemId { get; set; }
+        public bool SlotUnlocked { get; set; }
     }
 }

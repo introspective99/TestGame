@@ -162,7 +162,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IItemsMasterDbActionsRepo.cs" />
+    <Compile Include="DbRepositories\ArmourMasterDbActionsRepo.cs" />
+    <Compile Include="DbRepositories\CharacterMasterDbActionsRepo.cs" />
+    <Compile Include="DbRepositories\InventoryDbActionsRepo.cs" />
+    <Compile Include="DbRepositories\WeaponMasterDbActionsRepo.cs" />
+    <Compile Include="Interfaces\IArmourLogic.cs" />
+    <Compile Include="Interfaces\IArmourMasterDbActionsRepo.cs" />
+    <Compile Include="Interfaces\ICharacterLogic.cs" />
+    <Compile Include="Interfaces\ICharacterMasterDbActionsRepo.cs" />
+    <Compile Include="Interfaces\IInventoryDbActionsRepo.cs" />
+    <Compile Include="Interfaces\IInventoryLogic.cs" />
+    <Compile Include="Interfaces\IItemsReferenceDbActions.cs" />
     <Compile Include="DbRepositories\ItemsMasterDbActionsRepo.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
@@ -170,14 +180,20 @@
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IItemsAndInventoryLogic.cs" />
+    <Compile Include="Interfaces\IItemsLogic.cs" />
+    <Compile Include="Interfaces\IWeaponLogic.cs" />
+    <Compile Include="Interfaces\IWeaponMasterDbActionsRepo.cs" />
     <Compile Include="InventoryDisplayForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryDisplayForm.Designer.cs">
       <DependentUpon>InventoryDisplayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemsAndInventoryLogic.cs" />
+    <Compile Include="LogicClasses\ArmourLogic.cs" />
+    <Compile Include="LogicClasses\CharacterLogic.cs" />
+    <Compile Include="LogicClasses\InventoryLogic.cs" />
+    <Compile Include="LogicClasses\ItemsLogic.cs" />
+    <Compile Include="LogicClasses\WeaponLogic.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
       <DependentUpon>20200213165807_CreateTable_PlayerChars.cs</DependentUpon>
@@ -186,12 +202,58 @@
     <Compile Include="Migrations\20200215013122_InitHomeDatabase.designer.cs">
       <DependentUpon>20200215013122_InitHomeDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200218221116_FixTable_ItemsMasterTable.cs" />
+    <Compile Include="Migrations\20200218221116_FixTable_ItemsMasterTable.designer.cs">
+      <DependentUpon>20200218221116_FixTable_ItemsMasterTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218221841_CreateTable_MasterItemsTable.cs" />
+    <Compile Include="Migrations\20200218221841_CreateTable_MasterItemsTable.designer.cs">
+      <DependentUpon>20200218221841_CreateTable_MasterItemsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218222121_EmptyDatabase.cs" />
+    <Compile Include="Migrations\20200218222121_EmptyDatabase.designer.cs">
+      <DependentUpon>20200218222121_EmptyDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218222931_RemoveTables.cs" />
+    <Compile Include="Migrations\20200218222931_RemoveTables.designer.cs">
+      <DependentUpon>20200218222931_RemoveTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218223329_CreateItemsReferenceTable.cs" />
+    <Compile Include="Migrations\20200218223329_CreateItemsReferenceTable.designer.cs">
+      <DependentUpon>20200218223329_CreateItemsReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218224102_CreateNewItemsReferenceTable.cs" />
+    <Compile Include="Migrations\20200218224102_CreateNewItemsReferenceTable.designer.cs">
+      <DependentUpon>20200218224102_CreateNewItemsReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200218233153_CreateTable_ArmourReferenceTable.cs" />
+    <Compile Include="Migrations\20200218233153_CreateTable_ArmourReferenceTable.designer.cs">
+      <DependentUpon>20200218233153_CreateTable_ArmourReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200219005903_CreateTable_WeaponReferenceTable.cs" />
+    <Compile Include="Migrations\20200219005903_CreateTable_WeaponReferenceTable.designer.cs">
+      <DependentUpon>20200219005903_CreateTable_WeaponReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200219011803_CreateTable_CharacterReferenceTable.cs" />
+    <Compile Include="Migrations\20200219011803_CreateTable_CharacterReferenceTable.designer.cs">
+      <DependentUpon>20200219011803_CreateTable_CharacterReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200219015853_EditTables_AddGoldValueColumn.cs" />
+    <Compile Include="Migrations\20200219015853_EditTables_AddGoldValueColumn.designer.cs">
+      <DependentUpon>20200219015853_EditTables_AddGoldValueColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20200219024016_CreateTable_Inventory.cs" />
+    <Compile Include="Migrations\20200219024016_CreateTable_Inventory.designer.cs">
+      <DependentUpon>20200219024016_CreateTable_Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
+    <Compile Include="ObjectModels\Armour.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />
     <Compile Include="ObjectModels\InventorySlot.cs" />
     <Compile Include="ObjectModels\Item.cs" />
-    <Compile Include="ObjectModels\PlayerChar.cs" />
+    <Compile Include="ObjectModels\Character.cs" />
     <Compile Include="GameDbContext.cs" />
+    <Compile Include="ObjectModels\Weapon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameWindow.resx">

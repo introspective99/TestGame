@@ -10,7 +10,8 @@ namespace GrindQuest.ObjectModels
     public class Item
     {
         //Primary key for the tables generated against this object. 
-        public int ItemID { get; set; }
+        public int ItemId { get; set; }
+        public int ItemGoldValue { get; set; }
         //the intention is for the max stack of some items to be increased to allow for unlocking upgrades.
         public int ItemMaxStack { get; set; }
         //Item name is used in a lot of methods to locate entries in tables, will need to validate the spelling somehow later on.

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GrindQuest
 {
-    public class ItemsMasterDbActionsRepo : IItemsMasterDbActionsRepo
+    public class ItemsMasterDbActionsRepo : IItemsReferenceDbActions
     {
         //Injects the GameDbContext into the actionsRepo so I can create methods for EF without needing a new instance of the DbContext.
         private readonly GameDbContext context;
@@ -21,16 +21,19 @@ namespace GrindQuest
         //self explanatory, inserts an Item to the ItemsMasterDb, I'll need another method for any other tables.
         public void InsertItemToItemsMasterDb(Item item)
         {
-            context.ItemsMasterTable.Add(item);
+            context.ItemsReferenceTable.Add(item);
+            Save();
         }
         //Fetches an Item from the ItemsMasterDb that has the specified ItemId, mostly for use by other methods.
         public Item GetItemById(int itemId)
         {
-            return context.ItemsMasterTable.FirstOrDefault(p => p.ItemID == itemId);
+            return context.ItemsReferenceTable.FirstOrDefault(p => p.ItemId == itemId);
+
         }
         public void RemoveItemFromItemsMasterDb(int itemId)
         {
-            context.ItemsMasterTable.Remove(GetItemById(itemId));
+            context.ItemsReferenceTable.Remove(GetItemById(itemId));
+            Save();
         }
         
         public void ModifyItemByItemIdFromItemsMasterDb(int itemId, string nameOfColumnToUpdate, Object newValue)
@@ -43,12 +46,13 @@ namespace GrindQuest
                     prop.SetValue(foundEntry, newValue);
                 }
             }
+            Save();
         }
 
         //again self explanatory, pulls from the table and removes whatever you tell it to remove.
 
         //not sure I need to explain this one.
-        public void Save()
+        private void Save()
         {
             context.SaveChanges();
         }
