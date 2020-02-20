@@ -6,9 +6,9 @@ namespace GrindQuest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
+            /*migrationBuilder.DropColumn(
                 name: "MyProperty",
-                table: "ItemsMasterTable");
+                table: "ItemsMasterTable");*/
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

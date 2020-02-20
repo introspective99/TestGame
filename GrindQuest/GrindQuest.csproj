@@ -166,6 +166,12 @@
     <Compile Include="DbRepositories\CharacterMasterDbActionsRepo.cs" />
     <Compile Include="DbRepositories\InventoryDbActionsRepo.cs" />
     <Compile Include="DbRepositories\WeaponMasterDbActionsRepo.cs" />
+    <Compile Include="GameStartMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameStartMenuForm.Designer.cs">
+      <DependentUpon>GameStartMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IArmourLogic.cs" />
     <Compile Include="Interfaces\IArmourMasterDbActionsRepo.cs" />
     <Compile Include="Interfaces\ICharacterLogic.cs" />
@@ -246,6 +252,10 @@
     <Compile Include="Migrations\20200219024016_CreateTable_Inventory.designer.cs">
       <DependentUpon>20200219024016_CreateTable_Inventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200220112615_DropMasterItemsTable.cs" />
+    <Compile Include="Migrations\20200220112615_DropMasterItemsTable.designer.cs">
+      <DependentUpon>20200220112615_DropMasterItemsTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
     <Compile Include="ObjectModels\Armour.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />
@@ -256,6 +266,9 @@
     <Compile Include="ObjectModels\Weapon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameStartMenuForm.resx">
+      <DependentUpon>GameStartMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </EmbeddedResource>

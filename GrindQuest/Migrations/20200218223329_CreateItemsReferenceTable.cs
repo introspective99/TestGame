@@ -6,7 +6,7 @@ namespace GrindQuest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            /*migrationBuilder.DropTable(
+            migrationBuilder.DropTable(
                 name: "PlayerChars");
 
             migrationBuilder.DropPrimaryKey(
@@ -28,12 +28,12 @@ namespace GrindQuest.Migrations
             migrationBuilder.AddPrimaryKey(
                 name: "PK_ItemsReferenceTable",
                 table: "ItemsReferenceTable",
-                column: "ItemId");*/
+                column: "ItemId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            /*migrationBuilder.DropPrimaryKey(
+            migrationBuilder.DropPrimaryKey(
                 name: "PK_ItemsReferenceTable",
                 table: "ItemsReferenceTable");
 
@@ -58,7 +58,7 @@ namespace GrindQuest.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PlayerChars", x => x.PlayerCharID);
-                });*/
+                });
         }
     }
 }

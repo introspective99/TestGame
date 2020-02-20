@@ -6,7 +6,7 @@ namespace GrindQuest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
+            /*migrationBuilder.CreateTable(
                 name: "ItemsReferenceTable",
                 columns: table => new
                 {
@@ -16,7 +16,7 @@ namespace GrindQuest.Migrations
                     ItemName = table.Column<string>(type: "varchar(50)", nullable: false),
                     ItemEffect = table.Column<string>(type: "varchar(50)", nullable: false),
                     ItemType = table.Column<string>(type: "varchar(50)", nullable: false),
-                });
+                });*/
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

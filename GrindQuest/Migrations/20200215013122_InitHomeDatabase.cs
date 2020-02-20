@@ -6,7 +6,7 @@ namespace GrindQuest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
+            /*migrationBuilder.DropColumn(
                 name: "InventoryID",
                 table: "PlayerChars");
 
@@ -25,7 +25,7 @@ namespace GrindQuest.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ItemsMasterTable", x => x.ItemID);
-                });
+                });*/
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
