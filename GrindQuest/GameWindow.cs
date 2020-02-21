@@ -38,7 +38,6 @@ namespace GrindQuest
         }
         private void SelectionTwoButton_Click(object sender, EventArgs e)
         {
-            //_itemsAndInventoryLogic.RemoveItemByItemIdFromItemsMasterTable();
         }
         private void SelectionThreeButton_Click(object sender, EventArgs e)
         {

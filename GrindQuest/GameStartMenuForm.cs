@@ -146,7 +146,6 @@ namespace GrindQuest
 
             if (result == DialogResult.Yes)
             {
-
                 _characterLogic.RemoveCharacterFromDatabase(slotOneNameLabel.Text);
                 slotOneNameLabel.Text = "Empty";
                 slotOneLevelLabel.Text = "0";
@@ -164,7 +163,6 @@ namespace GrindQuest
 
             if (result == DialogResult.Yes)
             {
-
                 _characterLogic.RemoveCharacterFromDatabase(slotTwoNameLabel.Text);
                 slotTwoNameLabel.Text = "Empty";
                 slotTwoLevelLabel.Text = "0";
@@ -181,7 +179,6 @@ namespace GrindQuest
 
             if (result == DialogResult.Yes)
             {
-
                 _characterLogic.RemoveCharacterFromDatabase(slotThreeNameLabel.Text);
                 slotThreeNameLabel.Text = "Empty";
                 slotThreeLevelLabel.Text = "0";
@@ -198,7 +195,6 @@ namespace GrindQuest
 
             if (result == DialogResult.Yes)
             {
-
                 _characterLogic.RemoveCharacterFromDatabase(slotFourNameLabel.Text);
                 slotFourNameLabel.Text = "Empty";
                 slotFourLevelLabel.Text = "0";
@@ -206,6 +202,13 @@ namespace GrindQuest
                 slotFourDeleteButton.Enabled = false;
                 this.Refresh();
             }
+        }
+
+        private void LoadSlotOneButton_Click(object sender, EventArgs e)
+        {
+            GameWindow openGame = new GameWindow();
+            openGame.Show();
+            this.Close();
         }
     }
 }

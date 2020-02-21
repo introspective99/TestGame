@@ -295,6 +295,7 @@
             // 
             // slotFourDeleteButton
             // 
+            this.slotFourDeleteButton.Enabled = false;
             this.slotFourDeleteButton.Location = new System.Drawing.Point(217, 258);
             this.slotFourDeleteButton.Name = "slotFourDeleteButton";
             this.slotFourDeleteButton.Size = new System.Drawing.Size(36, 23);
@@ -302,10 +303,10 @@
             this.slotFourDeleteButton.Text = "X";
             this.slotFourDeleteButton.UseVisualStyleBackColor = true;
             this.slotFourDeleteButton.Click += new System.EventHandler(this.SlotFourDeleteButton_Click);
-            this.slotFourDeleteButton.Enabled = false;
             // 
             // slotThreeDeleteButton
             // 
+            this.slotThreeDeleteButton.Enabled = false;
             this.slotThreeDeleteButton.Location = new System.Drawing.Point(217, 195);
             this.slotThreeDeleteButton.Name = "slotThreeDeleteButton";
             this.slotThreeDeleteButton.Size = new System.Drawing.Size(36, 23);
@@ -313,10 +314,10 @@
             this.slotThreeDeleteButton.Text = "X";
             this.slotThreeDeleteButton.UseVisualStyleBackColor = true;
             this.slotThreeDeleteButton.Click += new System.EventHandler(this.SlotThreeDeleteButton_Click);
-            this.slotThreeDeleteButton.Enabled = false;
             // 
             // slotTwoDeleteButton
             // 
+            this.slotTwoDeleteButton.Enabled = false;
             this.slotTwoDeleteButton.Location = new System.Drawing.Point(217, 129);
             this.slotTwoDeleteButton.Name = "slotTwoDeleteButton";
             this.slotTwoDeleteButton.Size = new System.Drawing.Size(36, 23);
@@ -324,10 +325,10 @@
             this.slotTwoDeleteButton.Text = "X";
             this.slotTwoDeleteButton.UseVisualStyleBackColor = true;
             this.slotTwoDeleteButton.Click += new System.EventHandler(this.SlotTwoDeleteButton_Click);
-            this.slotTwoDeleteButton.Enabled = false;
             // 
             // slotOneDeleteButton
             // 
+            this.slotOneDeleteButton.Enabled = false;
             this.slotOneDeleteButton.Location = new System.Drawing.Point(217, 62);
             this.slotOneDeleteButton.Name = "slotOneDeleteButton";
             this.slotOneDeleteButton.Size = new System.Drawing.Size(36, 23);
@@ -335,8 +336,6 @@
             this.slotOneDeleteButton.Text = "X";
             this.slotOneDeleteButton.UseVisualStyleBackColor = true;
             this.slotOneDeleteButton.Click += new System.EventHandler(this.SlotOneDeleteButton_Click);
-            this.slotOneDeleteButton.Enabled = false;
-
             // 
             // backToMenuButton
             // 
@@ -576,6 +575,7 @@
             this.loadSlotOneButton.TabIndex = 1;
             this.loadSlotOneButton.Text = "->";
             this.loadSlotOneButton.UseVisualStyleBackColor = true;
+            this.loadSlotOneButton.Click += new System.EventHandler(this.LoadSlotOneButton_Click);
             // 
             // loadCharacterLabel
             // 
@@ -591,8 +591,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 321);
-            this.Controls.Add(this.startMenuPanel);
             this.Controls.Add(this.loadCharacterPanel);
+            this.Controls.Add(this.startMenuPanel);
             this.Controls.Add(this.newCharacterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
