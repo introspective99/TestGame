@@ -6,8 +6,8 @@ namespace GrindQuest.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-            name: "MasterItemsTable");
+        //    migrationBuilder.DropTable(
+        //    name: "MasterItemsTable");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

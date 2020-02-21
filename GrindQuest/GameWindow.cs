@@ -35,7 +35,6 @@ namespace GrindQuest
         //mostly using these buttons to test functionalities.
         private void SelectionOneButton_Click(object sender, EventArgs e)
         {
-            _itemsLogic.AddTestItemsToItemsMasterTable();
         }
         private void SelectionTwoButton_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrindQuest.ObjectModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace GrindQuest.Interfaces
 {
     public interface ICharacterLogic
     {
-
+        void AddNewCharacterToDb(string characterName);
+        bool CheckForOpenSaveSpaces();
+        List<Character> GetListOfCharacters();
+        string PopulateNameLabels(List<Character> characters);
     }
 }

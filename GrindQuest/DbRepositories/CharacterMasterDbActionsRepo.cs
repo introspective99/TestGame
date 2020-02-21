@@ -1,5 +1,6 @@
 ﻿using GrindQuest.Interfaces;
 using GrindQuest.ObjectModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,15 +12,15 @@ namespace GrindQuest.DbRepositories
     public class CharacterMasterDbActionsRepo : ICharacterMasterDbActionsRepo
     {
         private readonly GameDbContext context;
-        public CharacterMasterDbActionsRepo(GameDbContext context)
+        public CharacterMasterDbActionsRepo()
         {
-            this.context = context;
+            this.context = (GameDbContext)Program.ServiceProvider.GetService(typeof(GameDbContext));
         }
         private void Save()
         {
             context.SaveChanges();
         }
-        public void InsertItemToCharacterMasterDb(Character character)
+        public void InsertCharacterToCharacterMasterDb(Character character)
         {
             context.CharacterMasterTable.Add(character);
             Save();
@@ -27,6 +28,11 @@ namespace GrindQuest.DbRepositories
         public Character GetCharacterById(int characterId)
         {
             return context.CharacterMasterTable.FirstOrDefault(p => p.CharacterId == characterId);
+        }
+        public List<Character> GetListOfCharactersInCharactersMasterTable()
+        {
+            List<Character> characterList = context.CharacterMasterTable.ToList<Character>();
+            return characterList;
         }
         public void RemoveCharacterFromCharacterMasterDb(int characterId)
         {

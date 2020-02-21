@@ -34,6 +34,7 @@
             this.loadGameButton = new System.Windows.Forms.Button();
             this.newGameButton = new System.Windows.Forms.Button();
             this.newCharacterPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.returnToMenuButton = new System.Windows.Forms.Button();
             this.confirmCharacterCreationButton = new System.Windows.Forms.Button();
             this.characterNameInputTextBox = new System.Windows.Forms.TextBox();
@@ -43,20 +44,33 @@
             this.warriorSpecRadioButton = new System.Windows.Forms.RadioButton();
             this.mageSpecRadioButton = new System.Windows.Forms.RadioButton();
             this.characterCreationLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.loadCharacterPanel = new System.Windows.Forms.Panel();
+            this.backToMenuButton = new System.Windows.Forms.Button();
+            this.slotFourGoldLabel = new System.Windows.Forms.Label();
+            this.slotFourGoldTagLabel = new System.Windows.Forms.Label();
+            this.slotFourLevelTagLabel = new System.Windows.Forms.Label();
+            this.slotFourLevelLabel = new System.Windows.Forms.Label();
+            this.slotFourNameLabel = new System.Windows.Forms.Label();
+            this.loadSlotFourButton = new System.Windows.Forms.Button();
+            this.slotThreeGoldLabel = new System.Windows.Forms.Label();
+            this.slotThreeGoldTagLabel = new System.Windows.Forms.Label();
+            this.slotThreeLevelTagLabel = new System.Windows.Forms.Label();
+            this.slotThreeLevelLabel = new System.Windows.Forms.Label();
+            this.slotThreeNameLabel = new System.Windows.Forms.Label();
+            this.loadSlotThreeButton = new System.Windows.Forms.Button();
+            this.slotTwoGoldLabel = new System.Windows.Forms.Label();
+            this.slotTwoGoldTagLabel = new System.Windows.Forms.Label();
+            this.slotTwoLevelTagLabel = new System.Windows.Forms.Label();
+            this.slotTwoLevelLabel = new System.Windows.Forms.Label();
+            this.slotTwoNameLabel = new System.Windows.Forms.Label();
+            this.loadSlotTwoButton = new System.Windows.Forms.Button();
+            this.slotOneGoldLabel = new System.Windows.Forms.Label();
+            this.slotOneGoldTagLabel = new System.Windows.Forms.Label();
+            this.slotOneLevelTagLabel = new System.Windows.Forms.Label();
+            this.slotOneLevelLabel = new System.Windows.Forms.Label();
+            this.slotOneNameLabel = new System.Windows.Forms.Label();
+            this.loadSlotOneButton = new System.Windows.Forms.Button();
             this.loadCharacterLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.startMenuPanel.SuspendLayout();
             this.newCharacterPanel.SuspendLayout();
             this.specSelectionGroupBox.SuspendLayout();
@@ -72,7 +86,7 @@
             this.startMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.startMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.startMenuPanel.Name = "startMenuPanel";
-            this.startMenuPanel.Size = new System.Drawing.Size(358, 409);
+            this.startMenuPanel.Size = new System.Drawing.Size(259, 321);
             this.startMenuPanel.TabIndex = 3;
             // 
             // creditsLabel
@@ -92,7 +106,7 @@
             this.grindQuestTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grindQuestTitleLabel.Location = new System.Drawing.Point(10, 9);
             this.grindQuestTitleLabel.Name = "grindQuestTitleLabel";
-            this.grindQuestTitleLabel.Size = new System.Drawing.Size(330, 18);
+            this.grindQuestTitleLabel.Size = new System.Drawing.Size(231, 18);
             this.grindQuestTitleLabel.TabIndex = 4;
             this.grindQuestTitleLabel.Text = "Welcome to GrindQuest";
             // 
@@ -102,7 +116,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loadGameButton.Location = new System.Drawing.Point(3, 85);
             this.loadGameButton.Name = "loadGameButton";
-            this.loadGameButton.Size = new System.Drawing.Size(352, 30);
+            this.loadGameButton.Size = new System.Drawing.Size(253, 30);
             this.loadGameButton.TabIndex = 2;
             this.loadGameButton.Text = "Load Game";
             this.loadGameButton.UseVisualStyleBackColor = true;
@@ -114,7 +128,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.newGameButton.Location = new System.Drawing.Point(3, 49);
             this.newGameButton.Name = "newGameButton";
-            this.newGameButton.Size = new System.Drawing.Size(352, 30);
+            this.newGameButton.Size = new System.Drawing.Size(253, 30);
             this.newGameButton.TabIndex = 1;
             this.newGameButton.Text = "New Game";
             this.newGameButton.UseVisualStyleBackColor = true;
@@ -132,9 +146,18 @@
             this.newCharacterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.newCharacterPanel.Location = new System.Drawing.Point(0, 0);
             this.newCharacterPanel.Name = "newCharacterPanel";
-            this.newCharacterPanel.Size = new System.Drawing.Size(358, 409);
+            this.newCharacterPanel.Size = new System.Drawing.Size(259, 321);
             this.newCharacterPanel.TabIndex = 3;
             this.newCharacterPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(246, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "(max 12 letters)";
             // 
             // returnToMenuButton
             // 
@@ -154,6 +177,7 @@
             this.confirmCharacterCreationButton.TabIndex = 12;
             this.confirmCharacterCreationButton.Text = "Create!";
             this.confirmCharacterCreationButton.UseVisualStyleBackColor = true;
+            this.confirmCharacterCreationButton.Click += new System.EventHandler(this.ConfirmCharacterCreationButton_Click);
             // 
             // characterNameInputTextBox
             // 
@@ -227,155 +251,295 @@
             this.characterCreationLabel.TabIndex = 8;
             this.characterCreationLabel.Text = "Create your Character!";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(246, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "(max 12 letters)";
-            // 
             // loadCharacterPanel
             // 
-            this.loadCharacterPanel.Controls.Add(this.label7);
-            this.loadCharacterPanel.Controls.Add(this.label6);
-            this.loadCharacterPanel.Controls.Add(this.label5);
-            this.loadCharacterPanel.Controls.Add(this.label4);
-            this.loadCharacterPanel.Controls.Add(this.label3);
-            this.loadCharacterPanel.Controls.Add(this.label2);
-            this.loadCharacterPanel.Controls.Add(this.button5);
-            this.loadCharacterPanel.Controls.Add(this.button4);
-            this.loadCharacterPanel.Controls.Add(this.button3);
-            this.loadCharacterPanel.Controls.Add(this.button2);
-            this.loadCharacterPanel.Controls.Add(this.button1);
+            this.loadCharacterPanel.Controls.Add(this.backToMenuButton);
+            this.loadCharacterPanel.Controls.Add(this.slotFourGoldLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotFourGoldTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotFourLevelTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotFourLevelLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotFourNameLabel);
+            this.loadCharacterPanel.Controls.Add(this.loadSlotFourButton);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeGoldLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeGoldTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeLevelTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeLevelLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeNameLabel);
+            this.loadCharacterPanel.Controls.Add(this.loadSlotThreeButton);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoGoldLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoGoldTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoLevelTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoLevelLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoNameLabel);
+            this.loadCharacterPanel.Controls.Add(this.loadSlotTwoButton);
+            this.loadCharacterPanel.Controls.Add(this.slotOneGoldLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotOneGoldTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotOneLevelTagLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotOneLevelLabel);
+            this.loadCharacterPanel.Controls.Add(this.slotOneNameLabel);
+            this.loadCharacterPanel.Controls.Add(this.loadSlotOneButton);
             this.loadCharacterPanel.Controls.Add(this.loadCharacterLabel);
             this.loadCharacterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loadCharacterPanel.Location = new System.Drawing.Point(0, 0);
             this.loadCharacterPanel.Name = "loadCharacterPanel";
-            this.loadCharacterPanel.Size = new System.Drawing.Size(358, 409);
+            this.loadCharacterPanel.Size = new System.Drawing.Size(259, 321);
             this.loadCharacterPanel.TabIndex = 6;
+            // 
+            // backToMenuButton
+            // 
+            this.backToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToMenuButton.Location = new System.Drawing.Point(163, 295);
+            this.backToMenuButton.Name = "backToMenuButton";
+            this.backToMenuButton.Size = new System.Drawing.Size(93, 23);
+            this.backToMenuButton.TabIndex = 35;
+            this.backToMenuButton.Text = "Return to menu";
+            this.backToMenuButton.UseVisualStyleBackColor = true;
+            this.backToMenuButton.Click += new System.EventHandler(this.BackToMenuButton_Click);
+            // 
+            // slotFourGoldLabel
+            // 
+            this.slotFourGoldLabel.AutoSize = true;
+            this.slotFourGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotFourGoldLabel.Location = new System.Drawing.Point(110, 264);
+            this.slotFourGoldLabel.Name = "slotFourGoldLabel";
+            this.slotFourGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotFourGoldLabel.TabIndex = 34;
+            this.slotFourGoldLabel.Text = "1111";
+            // 
+            // slotFourGoldTagLabel
+            // 
+            this.slotFourGoldTagLabel.AutoSize = true;
+            this.slotFourGoldTagLabel.Location = new System.Drawing.Point(81, 268);
+            this.slotFourGoldTagLabel.Name = "slotFourGoldTagLabel";
+            this.slotFourGoldTagLabel.Size = new System.Drawing.Size(32, 13);
+            this.slotFourGoldTagLabel.TabIndex = 33;
+            this.slotFourGoldTagLabel.Text = "Gold:";
+            // 
+            // slotFourLevelTagLabel
+            // 
+            this.slotFourLevelTagLabel.AutoSize = true;
+            this.slotFourLevelTagLabel.Location = new System.Drawing.Point(14, 268);
+            this.slotFourLevelTagLabel.Name = "slotFourLevelTagLabel";
+            this.slotFourLevelTagLabel.Size = new System.Drawing.Size(36, 13);
+            this.slotFourLevelTagLabel.TabIndex = 32;
+            this.slotFourLevelTagLabel.Text = "Level:";
+            // 
+            // slotFourLevelLabel
+            // 
+            this.slotFourLevelLabel.AutoSize = true;
+            this.slotFourLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotFourLevelLabel.Location = new System.Drawing.Point(48, 264);
+            this.slotFourLevelLabel.Name = "slotFourLevelLabel";
+            this.slotFourLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotFourLevelLabel.TabIndex = 31;
+            this.slotFourLevelLabel.Text = "99";
+            // 
+            // slotFourNameLabel
+            // 
+            this.slotFourNameLabel.AutoSize = true;
+            this.slotFourNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotFourNameLabel.Location = new System.Drawing.Point(14, 242);
+            this.slotFourNameLabel.Name = "slotFourNameLabel";
+            this.slotFourNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotFourNameLabel.TabIndex = 30;
+            this.slotFourNameLabel.Text = "XXXXXXXXXXX";
+            // 
+            // loadSlotFourButton
+            // 
+            this.loadSlotFourButton.Location = new System.Drawing.Point(183, 254);
+            this.loadSlotFourButton.Name = "loadSlotFourButton";
+            this.loadSlotFourButton.Size = new System.Drawing.Size(50, 30);
+            this.loadSlotFourButton.TabIndex = 29;
+            this.loadSlotFourButton.Text = "->";
+            this.loadSlotFourButton.UseVisualStyleBackColor = true;
+            // 
+            // slotThreeGoldLabel
+            // 
+            this.slotThreeGoldLabel.AutoSize = true;
+            this.slotThreeGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotThreeGoldLabel.Location = new System.Drawing.Point(110, 201);
+            this.slotThreeGoldLabel.Name = "slotThreeGoldLabel";
+            this.slotThreeGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotThreeGoldLabel.TabIndex = 28;
+            this.slotThreeGoldLabel.Text = "1111";
+            // 
+            // slotThreeGoldTagLabel
+            // 
+            this.slotThreeGoldTagLabel.AutoSize = true;
+            this.slotThreeGoldTagLabel.Location = new System.Drawing.Point(81, 205);
+            this.slotThreeGoldTagLabel.Name = "slotThreeGoldTagLabel";
+            this.slotThreeGoldTagLabel.Size = new System.Drawing.Size(32, 13);
+            this.slotThreeGoldTagLabel.TabIndex = 27;
+            this.slotThreeGoldTagLabel.Text = "Gold:";
+            // 
+            // slotThreeLevelTagLabel
+            // 
+            this.slotThreeLevelTagLabel.AutoSize = true;
+            this.slotThreeLevelTagLabel.Location = new System.Drawing.Point(14, 205);
+            this.slotThreeLevelTagLabel.Name = "slotThreeLevelTagLabel";
+            this.slotThreeLevelTagLabel.Size = new System.Drawing.Size(36, 13);
+            this.slotThreeLevelTagLabel.TabIndex = 26;
+            this.slotThreeLevelTagLabel.Text = "Level:";
+            // 
+            // slotThreeLevelLabel
+            // 
+            this.slotThreeLevelLabel.AutoSize = true;
+            this.slotThreeLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotThreeLevelLabel.Location = new System.Drawing.Point(48, 201);
+            this.slotThreeLevelLabel.Name = "slotThreeLevelLabel";
+            this.slotThreeLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotThreeLevelLabel.TabIndex = 25;
+            this.slotThreeLevelLabel.Text = "99";
+            // 
+            // slotThreeNameLabel
+            // 
+            this.slotThreeNameLabel.AutoSize = true;
+            this.slotThreeNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotThreeNameLabel.Location = new System.Drawing.Point(14, 179);
+            this.slotThreeNameLabel.Name = "slotThreeNameLabel";
+            this.slotThreeNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotThreeNameLabel.TabIndex = 24;
+            this.slotThreeNameLabel.Text = "XXXXXXXXXXX";
+            // 
+            // loadSlotThreeButton
+            // 
+            this.loadSlotThreeButton.Location = new System.Drawing.Point(183, 191);
+            this.loadSlotThreeButton.Name = "loadSlotThreeButton";
+            this.loadSlotThreeButton.Size = new System.Drawing.Size(50, 30);
+            this.loadSlotThreeButton.TabIndex = 23;
+            this.loadSlotThreeButton.Text = "->";
+            this.loadSlotThreeButton.UseVisualStyleBackColor = true;
+            // 
+            // slotTwoGoldLabel
+            // 
+            this.slotTwoGoldLabel.AutoSize = true;
+            this.slotTwoGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotTwoGoldLabel.Location = new System.Drawing.Point(110, 133);
+            this.slotTwoGoldLabel.Name = "slotTwoGoldLabel";
+            this.slotTwoGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotTwoGoldLabel.TabIndex = 22;
+            this.slotTwoGoldLabel.Text = "1111";
+            // 
+            // slotTwoGoldTagLabel
+            // 
+            this.slotTwoGoldTagLabel.AutoSize = true;
+            this.slotTwoGoldTagLabel.Location = new System.Drawing.Point(81, 137);
+            this.slotTwoGoldTagLabel.Name = "slotTwoGoldTagLabel";
+            this.slotTwoGoldTagLabel.Size = new System.Drawing.Size(32, 13);
+            this.slotTwoGoldTagLabel.TabIndex = 21;
+            this.slotTwoGoldTagLabel.Text = "Gold:";
+            // 
+            // slotTwoLevelTagLabel
+            // 
+            this.slotTwoLevelTagLabel.AutoSize = true;
+            this.slotTwoLevelTagLabel.Location = new System.Drawing.Point(14, 137);
+            this.slotTwoLevelTagLabel.Name = "slotTwoLevelTagLabel";
+            this.slotTwoLevelTagLabel.Size = new System.Drawing.Size(36, 13);
+            this.slotTwoLevelTagLabel.TabIndex = 20;
+            this.slotTwoLevelTagLabel.Text = "Level:";
+            // 
+            // slotTwoLevelLabel
+            // 
+            this.slotTwoLevelLabel.AutoSize = true;
+            this.slotTwoLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotTwoLevelLabel.Location = new System.Drawing.Point(48, 133);
+            this.slotTwoLevelLabel.Name = "slotTwoLevelLabel";
+            this.slotTwoLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotTwoLevelLabel.TabIndex = 19;
+            this.slotTwoLevelLabel.Text = "99";
+            // 
+            // slotTwoNameLabel
+            // 
+            this.slotTwoNameLabel.AutoSize = true;
+            this.slotTwoNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotTwoNameLabel.Location = new System.Drawing.Point(14, 111);
+            this.slotTwoNameLabel.Name = "slotTwoNameLabel";
+            this.slotTwoNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotTwoNameLabel.TabIndex = 18;
+            this.slotTwoNameLabel.Text = "XXXXXXXXXXX";
+            // 
+            // loadSlotTwoButton
+            // 
+            this.loadSlotTwoButton.Location = new System.Drawing.Point(183, 123);
+            this.loadSlotTwoButton.Name = "loadSlotTwoButton";
+            this.loadSlotTwoButton.Size = new System.Drawing.Size(50, 30);
+            this.loadSlotTwoButton.TabIndex = 17;
+            this.loadSlotTwoButton.Text = "->";
+            this.loadSlotTwoButton.UseVisualStyleBackColor = true;
+            // 
+            // slotOneGoldLabel
+            // 
+            this.slotOneGoldLabel.AutoSize = true;
+            this.slotOneGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotOneGoldLabel.Location = new System.Drawing.Point(110, 68);
+            this.slotOneGoldLabel.Name = "slotOneGoldLabel";
+            this.slotOneGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotOneGoldLabel.TabIndex = 16;
+            this.slotOneGoldLabel.Text = "1111";
+            // 
+            // slotOneGoldTagLabel
+            // 
+            this.slotOneGoldTagLabel.AutoSize = true;
+            this.slotOneGoldTagLabel.Location = new System.Drawing.Point(81, 72);
+            this.slotOneGoldTagLabel.Name = "slotOneGoldTagLabel";
+            this.slotOneGoldTagLabel.Size = new System.Drawing.Size(32, 13);
+            this.slotOneGoldTagLabel.TabIndex = 15;
+            this.slotOneGoldTagLabel.Text = "Gold:";
+            // 
+            // slotOneLevelTagLabel
+            // 
+            this.slotOneLevelTagLabel.AutoSize = true;
+            this.slotOneLevelTagLabel.Location = new System.Drawing.Point(14, 72);
+            this.slotOneLevelTagLabel.Name = "slotOneLevelTagLabel";
+            this.slotOneLevelTagLabel.Size = new System.Drawing.Size(36, 13);
+            this.slotOneLevelTagLabel.TabIndex = 14;
+            this.slotOneLevelTagLabel.Text = "Level:";
+            // 
+            // slotOneLevelLabel
+            // 
+            this.slotOneLevelLabel.AutoSize = true;
+            this.slotOneLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotOneLevelLabel.Location = new System.Drawing.Point(48, 68);
+            this.slotOneLevelLabel.Name = "slotOneLevelLabel";
+            this.slotOneLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotOneLevelLabel.TabIndex = 10;
+            this.slotOneLevelLabel.Text = "99";
+            // 
+            // slotOneNameLabel
+            // 
+            this.slotOneNameLabel.AutoSize = true;
+            this.slotOneNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slotOneNameLabel.Location = new System.Drawing.Point(14, 46);
+            this.slotOneNameLabel.Name = "slotOneNameLabel";
+            this.slotOneNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotOneNameLabel.TabIndex = 6;
+            this.slotOneNameLabel.Text = "XXXXXXXXXXX";
+            // 
+            // loadSlotOneButton
+            // 
+            this.loadSlotOneButton.Location = new System.Drawing.Point(183, 58);
+            this.loadSlotOneButton.Name = "loadSlotOneButton";
+            this.loadSlotOneButton.Size = new System.Drawing.Size(50, 30);
+            this.loadSlotOneButton.TabIndex = 1;
+            this.loadSlotOneButton.Text = "->";
+            this.loadSlotOneButton.UseVisualStyleBackColor = true;
             // 
             // loadCharacterLabel
             // 
             this.loadCharacterLabel.AutoSize = true;
-            this.loadCharacterLabel.Location = new System.Drawing.Point(15, 13);
+            this.loadCharacterLabel.Location = new System.Drawing.Point(14, 14);
             this.loadCharacterLabel.Name = "loadCharacterLabel";
             this.loadCharacterLabel.Size = new System.Drawing.Size(131, 13);
             this.loadCharacterLabel.TabIndex = 0;
             this.loadCharacterLabel.Text = "Choose Character to Load";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(212, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 49);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(212, 121);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 49);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(212, 176);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 49);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(212, 231);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 49);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(212, 286);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(79, 49);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(121, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 26);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 26);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(121, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 26);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(121, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 26);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(121, 295);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 26);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(311, 367);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "label7";
-            // 
             // GameStartMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 409);
-            this.Controls.Add(this.loadCharacterPanel);
+            this.ClientSize = new System.Drawing.Size(259, 321);
             this.Controls.Add(this.startMenuPanel);
+            this.Controls.Add(this.loadCharacterPanel);
             this.Controls.Add(this.newCharacterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -412,16 +576,30 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel loadCharacterPanel;
         private System.Windows.Forms.Label loadCharacterLabel;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label slotOneNameLabel;
+        private System.Windows.Forms.Button loadSlotOneButton;
+        private System.Windows.Forms.Label slotOneLevelLabel;
+        private System.Windows.Forms.Label slotFourGoldLabel;
+        private System.Windows.Forms.Label slotFourGoldTagLabel;
+        private System.Windows.Forms.Label slotFourLevelTagLabel;
+        private System.Windows.Forms.Label slotFourLevelLabel;
+        private System.Windows.Forms.Label slotFourNameLabel;
+        private System.Windows.Forms.Button loadSlotFourButton;
+        private System.Windows.Forms.Label slotThreeGoldLabel;
+        private System.Windows.Forms.Label slotThreeGoldTagLabel;
+        private System.Windows.Forms.Label slotThreeLevelTagLabel;
+        private System.Windows.Forms.Label slotThreeLevelLabel;
+        private System.Windows.Forms.Label slotThreeNameLabel;
+        private System.Windows.Forms.Button loadSlotThreeButton;
+        private System.Windows.Forms.Label slotTwoGoldLabel;
+        private System.Windows.Forms.Label slotTwoGoldTagLabel;
+        private System.Windows.Forms.Label slotTwoLevelTagLabel;
+        private System.Windows.Forms.Label slotTwoLevelLabel;
+        private System.Windows.Forms.Label slotTwoNameLabel;
+        private System.Windows.Forms.Button loadSlotTwoButton;
+        private System.Windows.Forms.Label slotOneGoldLabel;
+        private System.Windows.Forms.Label slotOneGoldTagLabel;
+        private System.Windows.Forms.Label slotOneLevelTagLabel;
+        private System.Windows.Forms.Button backToMenuButton;
     }
 }

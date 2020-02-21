@@ -256,6 +256,10 @@
     <Compile Include="Migrations\20200220112615_DropMasterItemsTable.designer.cs">
       <DependentUpon>20200220112615_DropMasterItemsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200220222742_AddCharacterGoldColumnToCharacterMasterTable.cs" />
+    <Compile Include="Migrations\20200220222742_AddCharacterGoldColumnToCharacterMasterTable.designer.cs">
+      <DependentUpon>20200220222742_AddCharacterGoldColumnToCharacterMasterTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
     <Compile Include="ObjectModels\Armour.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />

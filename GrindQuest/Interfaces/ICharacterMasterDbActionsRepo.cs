@@ -9,9 +9,10 @@ namespace GrindQuest.Interfaces
 {
     public interface ICharacterMasterDbActionsRepo
     {
-        void InsertItemToCharacterMasterDb(Character character);
+        void InsertCharacterToCharacterMasterDb(Character character);
         Character GetCharacterById(int characterId);
         void RemoveCharacterFromCharacterMasterDb(int characterId);
+        List<Character> GetListOfCharactersInCharactersMasterTable();
         void ModifyCharacterbyCharacterId(int characterId, string nameOfColumnToUpdate, Object newValue);
     }
 }
