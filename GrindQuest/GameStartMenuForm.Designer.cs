@@ -45,6 +45,10 @@
             this.mageSpecRadioButton = new System.Windows.Forms.RadioButton();
             this.characterCreationLabel = new System.Windows.Forms.Label();
             this.loadCharacterPanel = new System.Windows.Forms.Panel();
+            this.slotFourDeleteButton = new System.Windows.Forms.Button();
+            this.slotThreeDeleteButton = new System.Windows.Forms.Button();
+            this.slotTwoDeleteButton = new System.Windows.Forms.Button();
+            this.slotOneDeleteButton = new System.Windows.Forms.Button();
             this.backToMenuButton = new System.Windows.Forms.Button();
             this.slotFourGoldLabel = new System.Windows.Forms.Label();
             this.slotFourGoldTagLabel = new System.Windows.Forms.Label();
@@ -253,6 +257,10 @@
             // 
             // loadCharacterPanel
             // 
+            this.loadCharacterPanel.Controls.Add(this.slotFourDeleteButton);
+            this.loadCharacterPanel.Controls.Add(this.slotThreeDeleteButton);
+            this.loadCharacterPanel.Controls.Add(this.slotTwoDeleteButton);
+            this.loadCharacterPanel.Controls.Add(this.slotOneDeleteButton);
             this.loadCharacterPanel.Controls.Add(this.backToMenuButton);
             this.loadCharacterPanel.Controls.Add(this.slotFourGoldLabel);
             this.loadCharacterPanel.Controls.Add(this.slotFourGoldTagLabel);
@@ -285,6 +293,51 @@
             this.loadCharacterPanel.Size = new System.Drawing.Size(259, 321);
             this.loadCharacterPanel.TabIndex = 6;
             // 
+            // slotFourDeleteButton
+            // 
+            this.slotFourDeleteButton.Location = new System.Drawing.Point(217, 258);
+            this.slotFourDeleteButton.Name = "slotFourDeleteButton";
+            this.slotFourDeleteButton.Size = new System.Drawing.Size(36, 23);
+            this.slotFourDeleteButton.TabIndex = 39;
+            this.slotFourDeleteButton.Text = "X";
+            this.slotFourDeleteButton.UseVisualStyleBackColor = true;
+            this.slotFourDeleteButton.Click += new System.EventHandler(this.SlotFourDeleteButton_Click);
+            this.slotFourDeleteButton.Enabled = false;
+            // 
+            // slotThreeDeleteButton
+            // 
+            this.slotThreeDeleteButton.Location = new System.Drawing.Point(217, 195);
+            this.slotThreeDeleteButton.Name = "slotThreeDeleteButton";
+            this.slotThreeDeleteButton.Size = new System.Drawing.Size(36, 23);
+            this.slotThreeDeleteButton.TabIndex = 38;
+            this.slotThreeDeleteButton.Text = "X";
+            this.slotThreeDeleteButton.UseVisualStyleBackColor = true;
+            this.slotThreeDeleteButton.Click += new System.EventHandler(this.SlotThreeDeleteButton_Click);
+            this.slotThreeDeleteButton.Enabled = false;
+            // 
+            // slotTwoDeleteButton
+            // 
+            this.slotTwoDeleteButton.Location = new System.Drawing.Point(217, 129);
+            this.slotTwoDeleteButton.Name = "slotTwoDeleteButton";
+            this.slotTwoDeleteButton.Size = new System.Drawing.Size(36, 23);
+            this.slotTwoDeleteButton.TabIndex = 37;
+            this.slotTwoDeleteButton.Text = "X";
+            this.slotTwoDeleteButton.UseVisualStyleBackColor = true;
+            this.slotTwoDeleteButton.Click += new System.EventHandler(this.SlotTwoDeleteButton_Click);
+            this.slotTwoDeleteButton.Enabled = false;
+            // 
+            // slotOneDeleteButton
+            // 
+            this.slotOneDeleteButton.Location = new System.Drawing.Point(217, 62);
+            this.slotOneDeleteButton.Name = "slotOneDeleteButton";
+            this.slotOneDeleteButton.Size = new System.Drawing.Size(36, 23);
+            this.slotOneDeleteButton.TabIndex = 36;
+            this.slotOneDeleteButton.Text = "X";
+            this.slotOneDeleteButton.UseVisualStyleBackColor = true;
+            this.slotOneDeleteButton.Click += new System.EventHandler(this.SlotOneDeleteButton_Click);
+            this.slotOneDeleteButton.Enabled = false;
+
+            // 
             // backToMenuButton
             // 
             this.backToMenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -302,9 +355,9 @@
             this.slotFourGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotFourGoldLabel.Location = new System.Drawing.Point(110, 264);
             this.slotFourGoldLabel.Name = "slotFourGoldLabel";
-            this.slotFourGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotFourGoldLabel.Size = new System.Drawing.Size(18, 20);
             this.slotFourGoldLabel.TabIndex = 34;
-            this.slotFourGoldLabel.Text = "1111";
+            this.slotFourGoldLabel.Text = "0";
             // 
             // slotFourGoldTagLabel
             // 
@@ -330,9 +383,9 @@
             this.slotFourLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotFourLevelLabel.Location = new System.Drawing.Point(48, 264);
             this.slotFourLevelLabel.Name = "slotFourLevelLabel";
-            this.slotFourLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotFourLevelLabel.Size = new System.Drawing.Size(18, 20);
             this.slotFourLevelLabel.TabIndex = 31;
-            this.slotFourLevelLabel.Text = "99";
+            this.slotFourLevelLabel.Text = "0";
             // 
             // slotFourNameLabel
             // 
@@ -340,13 +393,13 @@
             this.slotFourNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotFourNameLabel.Location = new System.Drawing.Point(14, 242);
             this.slotFourNameLabel.Name = "slotFourNameLabel";
-            this.slotFourNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotFourNameLabel.Size = new System.Drawing.Size(50, 18);
             this.slotFourNameLabel.TabIndex = 30;
-            this.slotFourNameLabel.Text = "XXXXXXXXXXX";
+            this.slotFourNameLabel.Text = "Empty";
             // 
             // loadSlotFourButton
             // 
-            this.loadSlotFourButton.Location = new System.Drawing.Point(183, 254);
+            this.loadSlotFourButton.Location = new System.Drawing.Point(163, 254);
             this.loadSlotFourButton.Name = "loadSlotFourButton";
             this.loadSlotFourButton.Size = new System.Drawing.Size(50, 30);
             this.loadSlotFourButton.TabIndex = 29;
@@ -359,9 +412,9 @@
             this.slotThreeGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotThreeGoldLabel.Location = new System.Drawing.Point(110, 201);
             this.slotThreeGoldLabel.Name = "slotThreeGoldLabel";
-            this.slotThreeGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotThreeGoldLabel.Size = new System.Drawing.Size(18, 20);
             this.slotThreeGoldLabel.TabIndex = 28;
-            this.slotThreeGoldLabel.Text = "1111";
+            this.slotThreeGoldLabel.Text = "0";
             // 
             // slotThreeGoldTagLabel
             // 
@@ -387,9 +440,9 @@
             this.slotThreeLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotThreeLevelLabel.Location = new System.Drawing.Point(48, 201);
             this.slotThreeLevelLabel.Name = "slotThreeLevelLabel";
-            this.slotThreeLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotThreeLevelLabel.Size = new System.Drawing.Size(18, 20);
             this.slotThreeLevelLabel.TabIndex = 25;
-            this.slotThreeLevelLabel.Text = "99";
+            this.slotThreeLevelLabel.Text = "0";
             // 
             // slotThreeNameLabel
             // 
@@ -397,13 +450,13 @@
             this.slotThreeNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotThreeNameLabel.Location = new System.Drawing.Point(14, 179);
             this.slotThreeNameLabel.Name = "slotThreeNameLabel";
-            this.slotThreeNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotThreeNameLabel.Size = new System.Drawing.Size(50, 18);
             this.slotThreeNameLabel.TabIndex = 24;
-            this.slotThreeNameLabel.Text = "XXXXXXXXXXX";
+            this.slotThreeNameLabel.Text = "Empty";
             // 
             // loadSlotThreeButton
             // 
-            this.loadSlotThreeButton.Location = new System.Drawing.Point(183, 191);
+            this.loadSlotThreeButton.Location = new System.Drawing.Point(161, 191);
             this.loadSlotThreeButton.Name = "loadSlotThreeButton";
             this.loadSlotThreeButton.Size = new System.Drawing.Size(50, 30);
             this.loadSlotThreeButton.TabIndex = 23;
@@ -416,9 +469,9 @@
             this.slotTwoGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotTwoGoldLabel.Location = new System.Drawing.Point(110, 133);
             this.slotTwoGoldLabel.Name = "slotTwoGoldLabel";
-            this.slotTwoGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotTwoGoldLabel.Size = new System.Drawing.Size(18, 20);
             this.slotTwoGoldLabel.TabIndex = 22;
-            this.slotTwoGoldLabel.Text = "1111";
+            this.slotTwoGoldLabel.Text = "0";
             // 
             // slotTwoGoldTagLabel
             // 
@@ -444,9 +497,9 @@
             this.slotTwoLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotTwoLevelLabel.Location = new System.Drawing.Point(48, 133);
             this.slotTwoLevelLabel.Name = "slotTwoLevelLabel";
-            this.slotTwoLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotTwoLevelLabel.Size = new System.Drawing.Size(18, 20);
             this.slotTwoLevelLabel.TabIndex = 19;
-            this.slotTwoLevelLabel.Text = "99";
+            this.slotTwoLevelLabel.Text = "0";
             // 
             // slotTwoNameLabel
             // 
@@ -454,13 +507,13 @@
             this.slotTwoNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotTwoNameLabel.Location = new System.Drawing.Point(14, 111);
             this.slotTwoNameLabel.Name = "slotTwoNameLabel";
-            this.slotTwoNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotTwoNameLabel.Size = new System.Drawing.Size(50, 18);
             this.slotTwoNameLabel.TabIndex = 18;
-            this.slotTwoNameLabel.Text = "XXXXXXXXXXX";
+            this.slotTwoNameLabel.Text = "Empty";
             // 
             // loadSlotTwoButton
             // 
-            this.loadSlotTwoButton.Location = new System.Drawing.Point(183, 123);
+            this.loadSlotTwoButton.Location = new System.Drawing.Point(161, 125);
             this.loadSlotTwoButton.Name = "loadSlotTwoButton";
             this.loadSlotTwoButton.Size = new System.Drawing.Size(50, 30);
             this.loadSlotTwoButton.TabIndex = 17;
@@ -473,9 +526,9 @@
             this.slotOneGoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotOneGoldLabel.Location = new System.Drawing.Point(110, 68);
             this.slotOneGoldLabel.Name = "slotOneGoldLabel";
-            this.slotOneGoldLabel.Size = new System.Drawing.Size(45, 20);
+            this.slotOneGoldLabel.Size = new System.Drawing.Size(18, 20);
             this.slotOneGoldLabel.TabIndex = 16;
-            this.slotOneGoldLabel.Text = "1111";
+            this.slotOneGoldLabel.Text = "0";
             // 
             // slotOneGoldTagLabel
             // 
@@ -501,9 +554,9 @@
             this.slotOneLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotOneLevelLabel.Location = new System.Drawing.Point(48, 68);
             this.slotOneLevelLabel.Name = "slotOneLevelLabel";
-            this.slotOneLevelLabel.Size = new System.Drawing.Size(27, 20);
+            this.slotOneLevelLabel.Size = new System.Drawing.Size(18, 20);
             this.slotOneLevelLabel.TabIndex = 10;
-            this.slotOneLevelLabel.Text = "99";
+            this.slotOneLevelLabel.Text = "0";
             // 
             // slotOneNameLabel
             // 
@@ -511,13 +564,13 @@
             this.slotOneNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.slotOneNameLabel.Location = new System.Drawing.Point(14, 46);
             this.slotOneNameLabel.Name = "slotOneNameLabel";
-            this.slotOneNameLabel.Size = new System.Drawing.Size(118, 18);
+            this.slotOneNameLabel.Size = new System.Drawing.Size(50, 18);
             this.slotOneNameLabel.TabIndex = 6;
-            this.slotOneNameLabel.Text = "XXXXXXXXXXX";
+            this.slotOneNameLabel.Text = "Empty";
             // 
             // loadSlotOneButton
             // 
-            this.loadSlotOneButton.Location = new System.Drawing.Point(183, 58);
+            this.loadSlotOneButton.Location = new System.Drawing.Point(161, 58);
             this.loadSlotOneButton.Name = "loadSlotOneButton";
             this.loadSlotOneButton.Size = new System.Drawing.Size(50, 30);
             this.loadSlotOneButton.TabIndex = 1;
@@ -601,5 +654,9 @@
         private System.Windows.Forms.Label slotOneGoldTagLabel;
         private System.Windows.Forms.Label slotOneLevelTagLabel;
         private System.Windows.Forms.Button backToMenuButton;
+        private System.Windows.Forms.Button slotFourDeleteButton;
+        private System.Windows.Forms.Button slotThreeDeleteButton;
+        private System.Windows.Forms.Button slotTwoDeleteButton;
+        private System.Windows.Forms.Button slotOneDeleteButton;
     }
 }

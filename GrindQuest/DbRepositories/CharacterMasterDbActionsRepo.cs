@@ -29,6 +29,11 @@ namespace GrindQuest.DbRepositories
         {
             return context.CharacterMasterTable.FirstOrDefault(p => p.CharacterId == characterId);
         }
+        public Character GetCharacterByName(string characterName)
+        {
+            var foundCharacter = context.CharacterMasterTable.ToList().Where(c => c.CharacterName.CompareTo(characterName) >= 0);
+            return foundCharacter.FirstOrDefault();
+        }
         public List<Character> GetListOfCharactersInCharactersMasterTable()
         {
             List<Character> characterList = context.CharacterMasterTable.ToList<Character>();

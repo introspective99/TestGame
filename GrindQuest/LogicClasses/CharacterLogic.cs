@@ -34,7 +34,7 @@ namespace GrindQuest.LogicClasses
         public bool CheckForOpenSaveSpaces()
         {
             List<Character> characterList = _characterMasterDbActionsRepo.GetListOfCharactersInCharactersMasterTable();
-            if (characterList.Count < 4)
+            if(characterList.Count < 4)
             {
                 return true;
             }
@@ -43,12 +43,18 @@ namespace GrindQuest.LogicClasses
                 return false;
             }
         }
-        public List<Character> GetListOfCharacters()
+        public List<Character> GetListOfCharactersForLabelData()
         {
             List<Character> characterList = _characterMasterDbActionsRepo.GetListOfCharactersInCharactersMasterTable();
             return characterList;
         }
 
+        public void RemoveCharacterFromDatabase(string characterName)
+        {
+            Character characterToRemove = _characterMasterDbActionsRepo.GetCharacterByName(characterName);
+            _characterMasterDbActionsRepo.RemoveCharacterFromCharacterMasterDb(characterToRemove.CharacterId);
+        }
+        
         [Obsolete]
         public string PopulateNameLabels(List<Character> characters)
         {

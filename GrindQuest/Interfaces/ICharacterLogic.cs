@@ -11,7 +11,9 @@ namespace GrindQuest.Interfaces
     {
         void AddNewCharacterToDb(string characterName);
         bool CheckForOpenSaveSpaces();
-        List<Character> GetListOfCharacters();
+        List<Character> GetListOfCharactersForLabelData();
         string PopulateNameLabels(List<Character> characters);
+        void RemoveCharacterFromDatabase(string characterName);
+
     }
 }

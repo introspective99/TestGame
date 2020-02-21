@@ -15,7 +15,6 @@ namespace GrindQuest
 {
     public partial class GameStartMenuForm : Form
     {
-
         private Size startMenuFormSize = new Size()
         {
             Height = 290,
@@ -32,10 +31,6 @@ namespace GrindQuest
             Width = 275,
         };
         private readonly ICharacterLogic _characterLogic;
-        //public GameStartMenuForm(ICharacterLogic characterLogic)
-        //{
-            //_characterLogic = characterLogic;
-        //}
 
         public GameStartMenuForm()
         {
@@ -56,24 +51,22 @@ namespace GrindQuest
         private void LoadGameButton_Click(object sender, EventArgs e)
         {
             //switches to the load character panel and hides the start menu panel
-            List<Character> characterList = _characterLogic.GetListOfCharacters();
+            List<Character> characterList = _characterLogic.GetListOfCharactersForLabelData();
 
-            //First Character slot labels
-            slotOneNameLabel.Text = characterList[0].CharacterName;
-            slotOneLevelLabel.Text = characterList[0].CharacterLevel.ToString();
-            slotOneGoldLabel.Text = characterList[0].CharacterGold.ToString();
-            //Second Character slot labels
-            slotTwoNameLabel.Text = characterList[1].CharacterName;
-            slotTwoLevelLabel.Text = characterList[1].CharacterLevel.ToString();
-            slotTwoGoldLabel.Text = characterList[1].CharacterGold.ToString();
-            //Third Character slot labels
-            slotThreeNameLabel.Text = characterList[2].CharacterName;
-            slotThreeLevelLabel.Text = characterList[2].CharacterLevel.ToString();
-            slotThreeGoldLabel.Text = characterList[2].CharacterGold.ToString();
-            //Fourth Character slot label
-            slotFourNameLabel.Text = characterList[3].CharacterName;
-            slotFourLevelLabel.Text = characterList[3].CharacterLevel.ToString();
-            slotFourGoldLabel.Text = characterList[3].CharacterGold.ToString();
+            var nameLabels = new List<Label> { slotOneNameLabel, slotTwoNameLabel, slotThreeNameLabel, slotFourNameLabel };
+            var levelLabels = new List<Label> { slotOneLevelLabel, slotTwoLevelLabel, slotThreeLevelLabel, slotFourLevelLabel };
+            var goldLabels = new List<Label> { slotOneGoldLabel, slotTwoGoldLabel, slotThreeGoldLabel, slotFourGoldLabel };
+            var deleteButtons = new List<Button> { slotOneDeleteButton, slotTwoDeleteButton, slotThreeDeleteButton, slotFourDeleteButton };
+
+            int counter = 0;
+            foreach (Character character in characterList)
+            {
+                nameLabels[counter].Text = character.CharacterName;
+                levelLabels[counter].Text = character.CharacterLevel.ToString();
+                goldLabels[counter].Text = character.CharacterGold.ToString();
+                deleteButtons[counter].Enabled = true;
+                counter++;
+            }
 
             this.Size = loadCharacterFormSize;
             startMenuPanel.Hide();
@@ -106,21 +99,112 @@ namespace GrindQuest
 
         private void ConfirmCharacterCreationButton_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(characterNameInputTextBox.Text) & _characterLogic.CheckForOpenSaveSpaces().Equals(true))
+
+            if (!String.IsNullOrEmpty(characterNameInputTextBox.Text))
             {
-                _characterLogic.AddNewCharacterToDb(characterNameInputTextBox.Text);
-                newCharacterPanel.Hide();
-                startMenuPanel.Hide();
-                this.Size = loadCharacterFormSize;
-                loadCharacterPanel.Show();
+                if (_characterLogic.CheckForOpenSaveSpaces().Equals(true))
+                {
+                    _characterLogic.AddNewCharacterToDb(characterNameInputTextBox.Text);
+
+                    //switches to the load character panel and hides the start menu panel
+                    List<Character> characterList = _characterLogic.GetListOfCharactersForLabelData();
+
+                    var nameLabels = new List<Label> { slotOneNameLabel, slotTwoNameLabel, slotThreeNameLabel, slotFourNameLabel };
+                    var levelLabels = new List<Label> { slotOneLevelLabel, slotTwoLevelLabel, slotThreeLevelLabel, slotFourLevelLabel };
+                    var goldLabels = new List<Label> { slotOneGoldLabel, slotTwoGoldLabel, slotThreeGoldLabel, slotFourGoldLabel };
+                    var deleteButtons = new List<Button> { slotOneDeleteButton, slotTwoDeleteButton, slotThreeDeleteButton, slotFourDeleteButton };
+
+                    int counter = 0;
+                    foreach (Character character in characterList)
+                    {
+                        nameLabels[counter].Text = character.CharacterName;
+                        levelLabels[counter].Text = character.CharacterLevel.ToString();
+                        goldLabels[counter].Text = character.CharacterGold.ToString();
+                        deleteButtons[counter].Enabled = true;
+                        counter++;
+                    }
+
+                    newCharacterPanel.Hide();
+                    startMenuPanel.Hide();
+                    this.Size = loadCharacterFormSize;
+                    loadCharacterPanel.Show();
+
+                }
+                else if (_characterLogic.CheckForOpenSaveSpaces().Equals(false))
+                {
+                    MessageBox.Show("Not Enough Character Spaces, delete one to make room");
+                }
             }
-            else if(_characterLogic.CheckForOpenSaveSpaces().Equals(false))
+
+        }
+
+        private void SlotOneDeleteButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("This is permanent!", "Are you sure you want to delete this hero?",
+                                            MessageBoxButtons.YesNo,
+                                            MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Not Enough Character Spaces, delete one to make room");
-                newCharacterPanel.Hide();
-                startMenuPanel.Hide();
-                this.Size = loadCharacterFormSize;
-                loadCharacterPanel.Show();
+
+                _characterLogic.RemoveCharacterFromDatabase(slotOneNameLabel.Text);
+                slotOneNameLabel.Text = "Empty";
+                slotOneLevelLabel.Text = "0";
+                slotOneGoldLabel.Text = "0";
+                slotOneDeleteButton.Enabled = false;
+                this.Refresh();
+            }
+        }
+
+        private void SlotTwoDeleteButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("This is permanent!", "Are you sure you want to delete this hero?",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                _characterLogic.RemoveCharacterFromDatabase(slotTwoNameLabel.Text);
+                slotTwoNameLabel.Text = "Empty";
+                slotTwoLevelLabel.Text = "0";
+                slotTwoGoldLabel.Text = "0";
+                slotTwoDeleteButton.Enabled = false;
+                this.Refresh();
+            }
+        }
+        private void SlotThreeDeleteButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("This is permanent!", "Are you sure you want to delete this hero?",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                _characterLogic.RemoveCharacterFromDatabase(slotThreeNameLabel.Text);
+                slotThreeNameLabel.Text = "Empty";
+                slotThreeLevelLabel.Text = "0";
+                slotThreeGoldLabel.Text = "0";
+                slotThreeDeleteButton.Enabled = false;
+                this.Refresh();
+            }
+        }
+        private void SlotFourDeleteButton_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("This is permanent!", "Are you sure you want to delete this hero?",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+
+                _characterLogic.RemoveCharacterFromDatabase(slotFourNameLabel.Text);
+                slotFourNameLabel.Text = "Empty";
+                slotFourLevelLabel.Text = "0";
+                slotFourGoldLabel.Text = "0";
+                slotFourDeleteButton.Enabled = false;
+                this.Refresh();
             }
         }
     }

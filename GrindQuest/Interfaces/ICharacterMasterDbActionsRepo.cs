@@ -11,6 +11,7 @@ namespace GrindQuest.Interfaces
     {
         void InsertCharacterToCharacterMasterDb(Character character);
         Character GetCharacterById(int characterId);
+        Character GetCharacterByName(string characterName);
         void RemoveCharacterFromCharacterMasterDb(int characterId);
         List<Character> GetListOfCharactersInCharactersMasterTable();
         void ModifyCharacterbyCharacterId(int characterId, string nameOfColumnToUpdate, Object newValue);
