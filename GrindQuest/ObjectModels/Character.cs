@@ -19,11 +19,12 @@ namespace GrindQuest.ObjectModels
         public Inventory CharacterInventory { get; set; }
         public int CharacterLevel { get; set; }
         public int CharacterGold { get; set; }
-        //I think this is the best way to handle stats, instead of trying to create subtables in SQL for confusing stat tables.
+        //this probably isn't an effective way to manage stats but we'll see in future if I need to change it, it does work well for now.
         public int CharacterStrength { get; set; }
         public int CharacterIntellect { get; set; }
         public int CharacterAgility { get; set; }
         public int CharacterStamina { get; set; }
         public int CharacterSpeed { get; set; }
+        public string CurrentTileLocation { get; set; }
     }
 }

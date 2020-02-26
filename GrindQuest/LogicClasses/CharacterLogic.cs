@@ -28,6 +28,7 @@ namespace GrindQuest.LogicClasses
                     CharacterIntellect = 1,
                     CharacterAgility = 1,
                     CharacterSpeed = 1,
+                    CurrentTileLocation = "jTwo",
                 };
                 _characterMasterDbActionsRepo.InsertCharacterToCharacterMasterDb(newCharacter);
         }
@@ -61,6 +62,22 @@ namespace GrindQuest.LogicClasses
             string characterName = characters.First().CharacterName;
             characters.Remove(characters.First());
             return characterName;
+        }
+        
+        public Character GetCharacterFromDb(object characterIdentifier)
+        {
+            if(characterIdentifier is string)
+            {
+                return _characterMasterDbActionsRepo.GetCharacterByName(characterIdentifier.ToString());
+            }
+            else if(characterIdentifier is int)
+            {
+                return _characterMasterDbActionsRepo.GetCharacterById((Int32)characterIdentifier);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

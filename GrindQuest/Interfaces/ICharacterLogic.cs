@@ -14,6 +14,7 @@ namespace GrindQuest.Interfaces
         List<Character> GetListOfCharactersForLabelData();
         string PopulateNameLabels(List<Character> characters);
         void RemoveCharacterFromDatabase(string characterName);
+        Character GetCharacterFromDb(object characterIdentifier);
 
     }
 }

@@ -15,6 +15,7 @@ namespace GrindQuest
 {
     public partial class GameStartMenuForm : Form
     {
+
         private Size startMenuFormSize = new Size()
         {
             Height = 290,
@@ -57,6 +58,7 @@ namespace GrindQuest
             var levelLabels = new List<Label> { slotOneLevelLabel, slotTwoLevelLabel, slotThreeLevelLabel, slotFourLevelLabel };
             var goldLabels = new List<Label> { slotOneGoldLabel, slotTwoGoldLabel, slotThreeGoldLabel, slotFourGoldLabel };
             var deleteButtons = new List<Button> { slotOneDeleteButton, slotTwoDeleteButton, slotThreeDeleteButton, slotFourDeleteButton };
+            var loadButtonList = new List<Button> { loadSlotOneButton, loadSlotTwoButton, loadSlotThreeButton, loadSlotFourButton };
 
             int counter = 0;
             foreach (Character character in characterList)
@@ -65,6 +67,7 @@ namespace GrindQuest
                 levelLabels[counter].Text = character.CharacterLevel.ToString();
                 goldLabels[counter].Text = character.CharacterGold.ToString();
                 deleteButtons[counter].Enabled = true;
+                loadButtonList[counter].Enabled = true;
                 counter++;
             }
 
@@ -113,6 +116,7 @@ namespace GrindQuest
                     var levelLabels = new List<Label> { slotOneLevelLabel, slotTwoLevelLabel, slotThreeLevelLabel, slotFourLevelLabel };
                     var goldLabels = new List<Label> { slotOneGoldLabel, slotTwoGoldLabel, slotThreeGoldLabel, slotFourGoldLabel };
                     var deleteButtons = new List<Button> { slotOneDeleteButton, slotTwoDeleteButton, slotThreeDeleteButton, slotFourDeleteButton };
+                    var loadButtonList = new List<Button> { loadSlotOneButton, loadSlotTwoButton, loadSlotThreeButton, loadSlotFourButton };
 
                     int counter = 0;
                     foreach (Character character in characterList)
@@ -121,6 +125,8 @@ namespace GrindQuest
                         levelLabels[counter].Text = character.CharacterLevel.ToString();
                         goldLabels[counter].Text = character.CharacterGold.ToString();
                         deleteButtons[counter].Enabled = true;
+                        loadButtonList[counter].Enabled = true;
+
                         counter++;
                     }
 
@@ -204,11 +210,30 @@ namespace GrindQuest
             }
         }
 
-        private void LoadSlotOneButton_Click(object sender, EventArgs e)
+        private void LoadSelectedCharacter(object sender, EventArgs e)
         {
-            GameWindow openGame = new GameWindow();
-            openGame.Show();
-            this.Close();
+            var clickedButtonName = (Button)sender;
+            Character selectedCharacter = new Character();
+            switch (clickedButtonName.Name)
+              {
+                case "loadSlotOneButton":
+                    selectedCharacter = _characterLogic.GetCharacterFromDb(slotOneNameLabel.Text);
+                    break;
+                case "loadSlotTwoButton":
+                    selectedCharacter = _characterLogic.GetCharacterFromDb(slotOneNameLabel.Text);
+                    break;
+                case "loadSlotThreeButton":
+                    selectedCharacter = _characterLogic.GetCharacterFromDb(slotThreeNameLabel.Text);
+                    break;
+                case "loadSlotFourButton":
+                    selectedCharacter = _characterLogic.GetCharacterFromDb(slotFourNameLabel.Text);
+                    break;
+            };   
+
+            GameWindow gameWindow = new GameWindow();
+            gameWindow.playerCharacter = selectedCharacter;
+            this.Hide();
+            gameWindow.Show();
         }
     }
 }

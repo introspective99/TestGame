@@ -162,6 +162,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Databases\TilesDb.cs" />
     <Compile Include="DbRepositories\ArmourMasterDbActionsRepo.cs" />
     <Compile Include="DbRepositories\CharacterMasterDbActionsRepo.cs" />
     <Compile Include="DbRepositories\InventoryDbActionsRepo.cs" />
@@ -187,6 +188,7 @@
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IItemsLogic.cs" />
+    <Compile Include="Interfaces\ITileLogic.cs" />
     <Compile Include="Interfaces\IWeaponLogic.cs" />
     <Compile Include="Interfaces\IWeaponMasterDbActionsRepo.cs" />
     <Compile Include="InventoryDisplayForm.cs">
@@ -199,6 +201,7 @@
     <Compile Include="LogicClasses\CharacterLogic.cs" />
     <Compile Include="LogicClasses\InventoryLogic.cs" />
     <Compile Include="LogicClasses\ItemsLogic.cs" />
+    <Compile Include="LogicClasses\TileLogic.cs" />
     <Compile Include="LogicClasses\WeaponLogic.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.cs" />
     <Compile Include="Migrations\20200213165807_CreateTable_PlayerChars.designer.cs">
@@ -260,6 +263,10 @@
     <Compile Include="Migrations\20200220222742_AddCharacterGoldColumnToCharacterMasterTable.designer.cs">
       <DependentUpon>20200220222742_AddCharacterGoldColumnToCharacterMasterTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200225215430_UpdateCharacterTableWithLocationProperty.cs" />
+    <Compile Include="Migrations\20200225215430_UpdateCharacterTableWithLocationProperty.designer.cs">
+      <DependentUpon>20200225215430_UpdateCharacterTableWithLocationProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\GameDbContextModelSnapshot.cs" />
     <Compile Include="ObjectModels\Armour.cs" />
     <Compile Include="ObjectModels\Inventory.cs" />
@@ -267,7 +274,10 @@
     <Compile Include="ObjectModels\Item.cs" />
     <Compile Include="ObjectModels\Character.cs" />
     <Compile Include="GameDbContext.cs" />
+    <Compile Include="ObjectModels\Tile.cs" />
+    <Compile Include="ObjectModels\TileMovementConfig.cs" />
     <Compile Include="ObjectModels\Weapon.cs" />
+    <Compile Include="ObseleteAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameStartMenuForm.resx">

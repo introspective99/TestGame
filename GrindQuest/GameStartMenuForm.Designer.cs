@@ -404,6 +404,8 @@
             this.loadSlotFourButton.TabIndex = 29;
             this.loadSlotFourButton.Text = "->";
             this.loadSlotFourButton.UseVisualStyleBackColor = true;
+            this.loadSlotFourButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
+            this.loadSlotFourButton.Enabled = false;
             // 
             // slotThreeGoldLabel
             // 
@@ -461,6 +463,8 @@
             this.loadSlotThreeButton.TabIndex = 23;
             this.loadSlotThreeButton.Text = "->";
             this.loadSlotThreeButton.UseVisualStyleBackColor = true;
+            this.loadSlotThreeButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
+            this.loadSlotThreeButton.Enabled = false;
             // 
             // slotTwoGoldLabel
             // 
@@ -518,6 +522,8 @@
             this.loadSlotTwoButton.TabIndex = 17;
             this.loadSlotTwoButton.Text = "->";
             this.loadSlotTwoButton.UseVisualStyleBackColor = true;
+            this.loadSlotTwoButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
+            this.loadSlotTwoButton.Enabled = false;
             // 
             // slotOneGoldLabel
             // 
@@ -575,7 +581,8 @@
             this.loadSlotOneButton.TabIndex = 1;
             this.loadSlotOneButton.Text = "->";
             this.loadSlotOneButton.UseVisualStyleBackColor = true;
-            this.loadSlotOneButton.Click += new System.EventHandler(this.LoadSlotOneButton_Click);
+            this.loadSlotOneButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
+            this.loadSlotOneButton.Enabled = false;
             // 
             // loadCharacterLabel
             // 
@@ -591,8 +598,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 321);
-            this.Controls.Add(this.loadCharacterPanel);
             this.Controls.Add(this.startMenuPanel);
+            this.Controls.Add(this.loadCharacterPanel);
             this.Controls.Add(this.newCharacterPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

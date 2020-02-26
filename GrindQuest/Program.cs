@@ -31,6 +31,7 @@ namespace GrindQuest
             services.AddSingleton<ICharacterLogic, CharacterLogic>();
             services.AddSingleton<ICharacterMasterDbActionsRepo, CharacterMasterDbActionsRepo>();
             services.AddSingleton<GameDbContext>();
+            services.AddSingleton<TileLogic>();
             ServiceProvider = services.BuildServiceProvider();
         }
     }
