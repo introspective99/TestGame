@@ -959,6 +959,242 @@ namespace GrindQuest.Databases
                 West = false,
             };
             allTiles.Add(tile80);
+
+            //ninth row of tiles
+            Tile tile81 = new Tile()
+            {
+                TileName = "tile81",
+                North = false,
+                East = true,
+                EastTileName = "tile82",
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile81);
+
+            Tile tile82 = new Tile()
+            {
+                TileName = "tile82",
+                North = true,
+                NorthTileName = "tile72",
+                East = true,
+                EastTileName = "tile83",
+                South = true,
+                SouthTileName = "tile92",
+                West = true,
+                WestTileName = "tile81",
+            };
+            allTiles.Add(tile82);
+
+            Tile tile83 = new Tile()
+            {
+                TileName = "tile83",
+                North = false,
+                East = false,
+                South = false,
+                West = true,
+                WestTileName = "tile82",
+            };
+            allTiles.Add(tile83);
+
+            Tile tile84 = new Tile()
+            {
+                TileName = "tile84",
+                North = true,
+                NorthTileName = "tile74",
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile84);
+
+            Tile tile85 = new Tile()
+            {
+                TileName = "tile85",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile85);
+
+            Tile tile86 = new Tile()
+            {
+                TileName = "tile86",
+                North = true,
+                NorthTileName = "tile76",
+                East = true,
+                EastTileName = "tile87",
+                South = true,
+                SouthTileName = "tile96",
+                West = false,
+            };
+            allTiles.Add(tile86);
+
+            Tile tile87 = new Tile()
+            {
+                TileName = "tile87",
+                North = true,
+                NorthTileName = "tile77",
+                East = true,
+                EastTileName = "tile88",
+                South = true,
+                SouthTileName = "tile97",
+                West = true,
+                WestTileName = "tile86",
+
+            };
+            allTiles.Add(tile87);
+
+            Tile tile88 = new Tile()
+            {
+                TileName = "tile88",
+                North = true,
+                NorthTileName = "tile78",
+                East = true,
+                EastTileName = "tile89",
+                South = true,
+                SouthTileName = "tile98",
+                West = true,
+                WestTileName = "tile87",
+            };
+            allTiles.Add(tile88);
+
+            Tile tile89 = new Tile()
+            {
+                TileName = "tile89",
+                North = true,
+                NorthTileName = "tile79",
+                East = false,
+                South = true,
+                SouthTileName = "tile99",
+                West = true,
+                WestTileName = "tile88",
+            };
+            allTiles.Add(tile89);
+
+            Tile tile90 = new Tile()
+            {
+                TileName = "tile90",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile90);
+
+            //tenth row of tiles
+            Tile tile91 = new Tile()
+            {
+                TileName = "tile91",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile91);
+
+            Tile tile92 = new Tile()
+            {
+                TileName = "tile92",
+                North = true,
+                NorthTileName = "tile82",
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile92);
+
+            Tile tile93 = new Tile()
+            {
+                TileName = "tile93",
+                North = false ,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile93);
+
+            Tile tile94 = new Tile()
+            {
+                TileName = "tile94",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile94);
+
+            Tile tile95 = new Tile()
+            {
+                TileName = "tile95",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile95);
+
+            Tile tile96 = new Tile()
+            {
+                TileName = "tile96",
+                North = true,
+                NorthTileName = "tile86",
+                East = true,
+                EastTileName = "tile97",
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile96);
+
+            Tile tile97 = new Tile()
+            {
+                TileName = "tile97",
+                North = true,
+                NorthTileName = "tile87",
+                East = true,
+                EastTileName = "tile98",
+                South = false,
+                West = true,
+                WestTileName = "tile96",
+
+            };
+            allTiles.Add(tile97);
+
+            Tile tile98 = new Tile()
+            {
+                TileName = "tile98",
+                North = true,
+                NorthTileName = "tile88",
+                East = true,
+                EastTileName = "tile99",
+                South = false,
+                West = true,
+                WestTileName = "tile97",
+            };
+            allTiles.Add(tile98);
+
+            Tile tile99 = new Tile()
+            {
+                TileName = "tile99",
+                North = true,
+                NorthTileName = "tile89",
+                East = false,
+                South = false,
+                West = true,
+                WestTileName = "tile98",
+            };
+            allTiles.Add(tile99);
+
+            Tile tile100 = new Tile()
+            {
+                TileName = "tile100",
+                North = false,
+                East = false,
+                South = false,
+                West = false,
+            };
+            allTiles.Add(tile100);
         }
     }
 }

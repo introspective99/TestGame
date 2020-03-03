@@ -64,7 +64,6 @@
             this.tile26 = new System.Windows.Forms.Label();
             this.tile25 = new System.Windows.Forms.Label();
             this.tile24 = new System.Windows.Forms.Label();
-            this.tile23 = new System.Windows.Forms.Label();
             this.tile22 = new System.Windows.Forms.Label();
             this.tile21 = new System.Windows.Forms.Label();
             this.tile40 = new System.Windows.Forms.Label();
@@ -111,7 +110,6 @@
             this.tile79 = new System.Windows.Forms.Label();
             this.tile78 = new System.Windows.Forms.Label();
             this.tile77 = new System.Windows.Forms.Label();
-            this.tile76 = new System.Windows.Forms.Label();
             this.tile75 = new System.Windows.Forms.Label();
             this.tile74 = new System.Windows.Forms.Label();
             this.tile73 = new System.Windows.Forms.Label();
@@ -137,6 +135,8 @@
             this.tile53 = new System.Windows.Forms.Label();
             this.tile52 = new System.Windows.Forms.Label();
             this.tile51 = new System.Windows.Forms.Label();
+            this.tile23 = new System.Windows.Forms.Label();
+            this.tile76 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // leftButton
@@ -269,6 +269,7 @@
             // 
             // tile5
             // 
+            this.tile5.BackColor = System.Drawing.Color.YellowGreen;
             this.tile5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile5.Location = new System.Drawing.Point(817, 12);
             this.tile5.Margin = new System.Windows.Forms.Padding(3);
@@ -279,6 +280,7 @@
             // 
             // tile6
             // 
+            this.tile6.BackColor = System.Drawing.Color.YellowGreen;
             this.tile6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile6.Location = new System.Drawing.Point(868, 12);
             this.tile6.Margin = new System.Windows.Forms.Padding(3);
@@ -289,7 +291,7 @@
             // 
             // tile7
             // 
-            this.tile7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile7.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile7.Location = new System.Drawing.Point(919, 12);
             this.tile7.Margin = new System.Windows.Forms.Padding(3);
@@ -300,7 +302,7 @@
             // 
             // tile8
             // 
-            this.tile8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile8.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile8.Location = new System.Drawing.Point(970, 12);
             this.tile8.Margin = new System.Windows.Forms.Padding(3);
@@ -311,7 +313,7 @@
             // 
             // tile9
             // 
-            this.tile9.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile9.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile9.Location = new System.Drawing.Point(1021, 12);
             this.tile9.Margin = new System.Windows.Forms.Padding(3);
@@ -322,7 +324,7 @@
             // 
             // tile10
             // 
-            this.tile10.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile10.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile10.Location = new System.Drawing.Point(1072, 12);
             this.tile10.Margin = new System.Windows.Forms.Padding(3);
@@ -333,7 +335,7 @@
             // 
             // tile20
             // 
-            this.tile20.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile20.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile20.Location = new System.Drawing.Point(1072, 63);
             this.tile20.Margin = new System.Windows.Forms.Padding(3);
@@ -344,7 +346,7 @@
             // 
             // tile19
             // 
-            this.tile19.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile19.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile19.Location = new System.Drawing.Point(1021, 63);
             this.tile19.Margin = new System.Windows.Forms.Padding(3);
@@ -355,7 +357,7 @@
             // 
             // tile18
             // 
-            this.tile18.BackColor = System.Drawing.Color.SaddleBrown;
+            this.tile18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(64)))), ((int)(((byte)(50)))));
             this.tile18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile18.Location = new System.Drawing.Point(970, 63);
             this.tile18.Margin = new System.Windows.Forms.Padding(3);
@@ -366,7 +368,7 @@
             // 
             // tile17
             // 
-            this.tile17.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile17.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile17.Location = new System.Drawing.Point(919, 63);
             this.tile17.Margin = new System.Windows.Forms.Padding(3);
@@ -410,6 +412,7 @@
             // 
             // tile13
             // 
+            this.tile13.BackColor = System.Drawing.Color.YellowGreen;
             this.tile13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile13.Location = new System.Drawing.Point(715, 63);
             this.tile13.Margin = new System.Windows.Forms.Padding(3);
@@ -420,6 +423,7 @@
             // 
             // tile12
             // 
+            this.tile12.BackColor = System.Drawing.Color.YellowGreen;
             this.tile12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile12.Location = new System.Drawing.Point(664, 63);
             this.tile12.Margin = new System.Windows.Forms.Padding(3);
@@ -430,6 +434,7 @@
             // 
             // tile11
             // 
+            this.tile11.BackColor = System.Drawing.Color.YellowGreen;
             this.tile11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile11.Location = new System.Drawing.Point(613, 63);
             this.tile11.Margin = new System.Windows.Forms.Padding(3);
@@ -440,7 +445,7 @@
             // 
             // tile30
             // 
-            this.tile30.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile30.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile30.Location = new System.Drawing.Point(1072, 114);
             this.tile30.Margin = new System.Windows.Forms.Padding(3);
@@ -451,7 +456,7 @@
             // 
             // tile29
             // 
-            this.tile29.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile29.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile29.Location = new System.Drawing.Point(1021, 114);
             this.tile29.Margin = new System.Windows.Forms.Padding(3);
@@ -462,7 +467,7 @@
             // 
             // tile28
             // 
-            this.tile28.BackColor = System.Drawing.Color.SaddleBrown;
+            this.tile28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(64)))), ((int)(((byte)(50)))));
             this.tile28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile28.Location = new System.Drawing.Point(970, 114);
             this.tile28.Margin = new System.Windows.Forms.Padding(3);
@@ -473,7 +478,7 @@
             // 
             // tile27
             // 
-            this.tile27.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile27.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile27.Location = new System.Drawing.Point(919, 114);
             this.tile27.Margin = new System.Windows.Forms.Padding(3);
@@ -495,6 +500,7 @@
             // 
             // tile25
             // 
+            this.tile25.BackColor = System.Drawing.Color.YellowGreen;
             this.tile25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile25.Location = new System.Drawing.Point(817, 114);
             this.tile25.Margin = new System.Windows.Forms.Padding(3);
@@ -505,6 +511,7 @@
             // 
             // tile24
             // 
+            this.tile24.BackColor = System.Drawing.Color.YellowGreen;
             this.tile24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile24.Location = new System.Drawing.Point(766, 114);
             this.tile24.Margin = new System.Windows.Forms.Padding(3);
@@ -513,18 +520,9 @@
             this.tile24.TabIndex = 33;
             this.tile24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tile23
-            // 
-            this.tile23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tile23.Location = new System.Drawing.Point(715, 114);
-            this.tile23.Margin = new System.Windows.Forms.Padding(3);
-            this.tile23.Name = "tile23";
-            this.tile23.Size = new System.Drawing.Size(45, 45);
-            this.tile23.TabIndex = 32;
-            this.tile23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tile22
             // 
+            this.tile22.BackColor = System.Drawing.Color.YellowGreen;
             this.tile22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile22.Location = new System.Drawing.Point(664, 114);
             this.tile22.Margin = new System.Windows.Forms.Padding(3);
@@ -535,6 +533,7 @@
             // 
             // tile21
             // 
+            this.tile21.BackColor = System.Drawing.Color.YellowGreen;
             this.tile21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile21.Location = new System.Drawing.Point(613, 114);
             this.tile21.Margin = new System.Windows.Forms.Padding(3);
@@ -545,7 +544,7 @@
             // 
             // tile40
             // 
-            this.tile40.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile40.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile40.Location = new System.Drawing.Point(1072, 165);
             this.tile40.Margin = new System.Windows.Forms.Padding(3);
@@ -556,7 +555,7 @@
             // 
             // tile39
             // 
-            this.tile39.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile39.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile39.Location = new System.Drawing.Point(1021, 165);
             this.tile39.Margin = new System.Windows.Forms.Padding(3);
@@ -567,7 +566,7 @@
             // 
             // tile38
             // 
-            this.tile38.BackColor = System.Drawing.Color.SaddleBrown;
+            this.tile38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(64)))), ((int)(((byte)(50)))));
             this.tile38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile38.Location = new System.Drawing.Point(970, 165);
             this.tile38.Margin = new System.Windows.Forms.Padding(3);
@@ -578,7 +577,7 @@
             // 
             // tile37
             // 
-            this.tile37.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile37.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile37.Location = new System.Drawing.Point(919, 165);
             this.tile37.Margin = new System.Windows.Forms.Padding(3);
@@ -600,7 +599,7 @@
             // 
             // tile35
             // 
-            this.tile35.BackColor = System.Drawing.Color.DimGray;
+            this.tile35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile35.Location = new System.Drawing.Point(817, 165);
             this.tile35.Margin = new System.Windows.Forms.Padding(3);
@@ -611,7 +610,7 @@
             // 
             // tile34
             // 
-            this.tile34.BackColor = System.Drawing.Color.DimGray;
+            this.tile34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile34.Location = new System.Drawing.Point(766, 165);
             this.tile34.Margin = new System.Windows.Forms.Padding(3);
@@ -622,7 +621,7 @@
             // 
             // tile33
             // 
-            this.tile33.BackColor = System.Drawing.Color.DimGray;
+            this.tile33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile33.Location = new System.Drawing.Point(715, 165);
             this.tile33.Margin = new System.Windows.Forms.Padding(3);
@@ -633,7 +632,7 @@
             // 
             // tile32
             // 
-            this.tile32.BackColor = System.Drawing.Color.DimGray;
+            this.tile32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile32.Location = new System.Drawing.Point(664, 165);
             this.tile32.Margin = new System.Windows.Forms.Padding(3);
@@ -644,7 +643,7 @@
             // 
             // tile31
             // 
-            this.tile31.BackColor = System.Drawing.Color.DimGray;
+            this.tile31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile31.Location = new System.Drawing.Point(613, 165);
             this.tile31.Margin = new System.Windows.Forms.Padding(3);
@@ -688,7 +687,7 @@
             // 
             // tile47
             // 
-            this.tile47.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile47.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile47.Location = new System.Drawing.Point(919, 216);
             this.tile47.Margin = new System.Windows.Forms.Padding(3);
@@ -710,7 +709,7 @@
             // 
             // tile45
             // 
-            this.tile45.BackColor = System.Drawing.Color.DimGray;
+            this.tile45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile45.Location = new System.Drawing.Point(817, 216);
             this.tile45.Margin = new System.Windows.Forms.Padding(3);
@@ -721,6 +720,7 @@
             // 
             // tile44
             // 
+            this.tile44.BackColor = System.Drawing.Color.RoyalBlue;
             this.tile44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile44.Location = new System.Drawing.Point(766, 216);
             this.tile44.Margin = new System.Windows.Forms.Padding(3);
@@ -731,6 +731,7 @@
             // 
             // tile43
             // 
+            this.tile43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile43.Location = new System.Drawing.Point(715, 216);
             this.tile43.Margin = new System.Windows.Forms.Padding(3);
@@ -741,6 +742,7 @@
             // 
             // tile42
             // 
+            this.tile42.BackColor = System.Drawing.Color.DarkOrange;
             this.tile42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile42.Location = new System.Drawing.Point(664, 216);
             this.tile42.Margin = new System.Windows.Forms.Padding(3);
@@ -751,6 +753,7 @@
             // 
             // tile41
             // 
+            this.tile41.BackColor = System.Drawing.Color.DarkOrange;
             this.tile41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile41.Location = new System.Drawing.Point(613, 216);
             this.tile41.Margin = new System.Windows.Forms.Padding(3);
@@ -761,6 +764,7 @@
             // 
             // tile100
             // 
+            this.tile100.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile100.Location = new System.Drawing.Point(1072, 471);
             this.tile100.Margin = new System.Windows.Forms.Padding(3);
@@ -782,6 +786,7 @@
             // 
             // tile98
             // 
+            this.tile98.BackColor = System.Drawing.Color.YellowGreen;
             this.tile98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile98.Location = new System.Drawing.Point(970, 471);
             this.tile98.Margin = new System.Windows.Forms.Padding(3);
@@ -792,6 +797,7 @@
             // 
             // tile97
             // 
+            this.tile97.BackColor = System.Drawing.Color.YellowGreen;
             this.tile97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile97.Location = new System.Drawing.Point(919, 471);
             this.tile97.Margin = new System.Windows.Forms.Padding(3);
@@ -802,6 +808,7 @@
             // 
             // tile96
             // 
+            this.tile96.BackColor = System.Drawing.Color.YellowGreen;
             this.tile96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile96.Location = new System.Drawing.Point(868, 471);
             this.tile96.Margin = new System.Windows.Forms.Padding(3);
@@ -812,7 +819,7 @@
             // 
             // tile95
             // 
-            this.tile95.BackColor = System.Drawing.Color.DimGray;
+            this.tile95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile95.Location = new System.Drawing.Point(817, 471);
             this.tile95.Margin = new System.Windows.Forms.Padding(3);
@@ -823,6 +830,7 @@
             // 
             // tile94
             // 
+            this.tile94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile94.Location = new System.Drawing.Point(766, 471);
             this.tile94.Margin = new System.Windows.Forms.Padding(3);
@@ -833,6 +841,7 @@
             // 
             // tile93
             // 
+            this.tile93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile93.Location = new System.Drawing.Point(715, 471);
             this.tile93.Margin = new System.Windows.Forms.Padding(3);
@@ -854,6 +863,7 @@
             // 
             // tile91
             // 
+            this.tile91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile91.Location = new System.Drawing.Point(613, 471);
             this.tile91.Margin = new System.Windows.Forms.Padding(3);
@@ -864,6 +874,7 @@
             // 
             // tile90
             // 
+            this.tile90.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile90.Location = new System.Drawing.Point(1072, 420);
             this.tile90.Margin = new System.Windows.Forms.Padding(3);
@@ -885,6 +896,7 @@
             // 
             // tile88
             // 
+            this.tile88.BackColor = System.Drawing.Color.YellowGreen;
             this.tile88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile88.Location = new System.Drawing.Point(970, 420);
             this.tile88.Margin = new System.Windows.Forms.Padding(3);
@@ -895,6 +907,7 @@
             // 
             // tile87
             // 
+            this.tile87.BackColor = System.Drawing.Color.YellowGreen;
             this.tile87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile87.Location = new System.Drawing.Point(919, 420);
             this.tile87.Margin = new System.Windows.Forms.Padding(3);
@@ -905,6 +918,7 @@
             // 
             // tile86
             // 
+            this.tile86.BackColor = System.Drawing.Color.YellowGreen;
             this.tile86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile86.Location = new System.Drawing.Point(868, 420);
             this.tile86.Margin = new System.Windows.Forms.Padding(3);
@@ -915,7 +929,7 @@
             // 
             // tile85
             // 
-            this.tile85.BackColor = System.Drawing.Color.DimGray;
+            this.tile85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile85.Location = new System.Drawing.Point(817, 420);
             this.tile85.Margin = new System.Windows.Forms.Padding(3);
@@ -926,6 +940,7 @@
             // 
             // tile84
             // 
+            this.tile84.BackColor = System.Drawing.Color.ForestGreen;
             this.tile84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile84.Location = new System.Drawing.Point(766, 420);
             this.tile84.Margin = new System.Windows.Forms.Padding(3);
@@ -936,6 +951,7 @@
             // 
             // tile83
             // 
+            this.tile83.BackColor = System.Drawing.Color.RoyalBlue;
             this.tile83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile83.Location = new System.Drawing.Point(715, 420);
             this.tile83.Margin = new System.Windows.Forms.Padding(3);
@@ -957,6 +973,7 @@
             // 
             // tile81
             // 
+            this.tile81.BackColor = System.Drawing.Color.MediumVioletRed;
             this.tile81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile81.Location = new System.Drawing.Point(613, 420);
             this.tile81.Margin = new System.Windows.Forms.Padding(3);
@@ -967,6 +984,7 @@
             // 
             // tile80
             // 
+            this.tile80.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile80.Location = new System.Drawing.Point(1072, 369);
             this.tile80.Margin = new System.Windows.Forms.Padding(3);
@@ -988,6 +1006,7 @@
             // 
             // tile78
             // 
+            this.tile78.BackColor = System.Drawing.Color.YellowGreen;
             this.tile78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile78.Location = new System.Drawing.Point(970, 369);
             this.tile78.Margin = new System.Windows.Forms.Padding(3);
@@ -998,6 +1017,7 @@
             // 
             // tile77
             // 
+            this.tile77.BackColor = System.Drawing.Color.YellowGreen;
             this.tile77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile77.Location = new System.Drawing.Point(919, 369);
             this.tile77.Margin = new System.Windows.Forms.Padding(3);
@@ -1006,19 +1026,9 @@
             this.tile77.TabIndex = 86;
             this.tile77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tile76
-            // 
-            this.tile76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tile76.Location = new System.Drawing.Point(868, 369);
-            this.tile76.Margin = new System.Windows.Forms.Padding(3);
-            this.tile76.Name = "tile76";
-            this.tile76.Size = new System.Drawing.Size(45, 45);
-            this.tile76.TabIndex = 85;
-            this.tile76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // tile75
             // 
-            this.tile75.BackColor = System.Drawing.Color.DimGray;
+            this.tile75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile75.Location = new System.Drawing.Point(817, 369);
             this.tile75.Margin = new System.Windows.Forms.Padding(3);
@@ -1029,6 +1039,7 @@
             // 
             // tile74
             // 
+            this.tile74.BackColor = System.Drawing.Color.ForestGreen;
             this.tile74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile74.Location = new System.Drawing.Point(766, 369);
             this.tile74.Margin = new System.Windows.Forms.Padding(3);
@@ -1039,6 +1050,7 @@
             // 
             // tile73
             // 
+            this.tile73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile73.Location = new System.Drawing.Point(715, 369);
             this.tile73.Margin = new System.Windows.Forms.Padding(3);
@@ -1060,6 +1072,7 @@
             // 
             // tile71
             // 
+            this.tile71.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.tile71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile71.Location = new System.Drawing.Point(613, 369);
             this.tile71.Margin = new System.Windows.Forms.Padding(3);
@@ -1070,6 +1083,7 @@
             // 
             // tile70
             // 
+            this.tile70.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile70.Location = new System.Drawing.Point(1072, 318);
             this.tile70.Margin = new System.Windows.Forms.Padding(3);
@@ -1168,6 +1182,7 @@
             // 
             // tile61
             // 
+            this.tile61.BackColor = System.Drawing.Color.Firebrick;
             this.tile61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile61.Location = new System.Drawing.Point(613, 318);
             this.tile61.Margin = new System.Windows.Forms.Padding(3);
@@ -1178,6 +1193,7 @@
             // 
             // tile60
             // 
+            this.tile60.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile60.Location = new System.Drawing.Point(1072, 267);
             this.tile60.Margin = new System.Windows.Forms.Padding(3);
@@ -1188,6 +1204,7 @@
             // 
             // tile59
             // 
+            this.tile59.BackColor = System.Drawing.Color.PaleVioletRed;
             this.tile59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile59.Location = new System.Drawing.Point(1021, 267);
             this.tile59.Margin = new System.Windows.Forms.Padding(3);
@@ -1209,7 +1226,7 @@
             // 
             // tile57
             // 
-            this.tile57.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tile57.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tile57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile57.Location = new System.Drawing.Point(919, 267);
             this.tile57.Margin = new System.Windows.Forms.Padding(3);
@@ -1231,7 +1248,7 @@
             // 
             // tile55
             // 
-            this.tile55.BackColor = System.Drawing.Color.DimGray;
+            this.tile55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile55.Location = new System.Drawing.Point(817, 267);
             this.tile55.Margin = new System.Windows.Forms.Padding(3);
@@ -1242,6 +1259,7 @@
             // 
             // tile54
             // 
+            this.tile54.BackColor = System.Drawing.Color.RoyalBlue;
             this.tile54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile54.Location = new System.Drawing.Point(766, 267);
             this.tile54.Margin = new System.Windows.Forms.Padding(3);
@@ -1252,6 +1270,7 @@
             // 
             // tile53
             // 
+            this.tile53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tile53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile53.Location = new System.Drawing.Point(715, 267);
             this.tile53.Margin = new System.Windows.Forms.Padding(3);
@@ -1262,6 +1281,7 @@
             // 
             // tile52
             // 
+            this.tile52.BackColor = System.Drawing.Color.DarkOrange;
             this.tile52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile52.Location = new System.Drawing.Point(664, 267);
             this.tile52.Margin = new System.Windows.Forms.Padding(3);
@@ -1272,6 +1292,7 @@
             // 
             // tile51
             // 
+            this.tile51.BackColor = System.Drawing.Color.Firebrick;
             this.tile51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tile51.Location = new System.Drawing.Point(613, 267);
             this.tile51.Margin = new System.Windows.Forms.Padding(3);
@@ -1280,10 +1301,33 @@
             this.tile51.TabIndex = 60;
             this.tile51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tile23
+            // 
+            this.tile23.BackColor = System.Drawing.Color.YellowGreen;
+            this.tile23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tile23.Location = new System.Drawing.Point(715, 114);
+            this.tile23.Margin = new System.Windows.Forms.Padding(3);
+            this.tile23.Name = "tile23";
+            this.tile23.Size = new System.Drawing.Size(45, 45);
+            this.tile23.TabIndex = 32;
+            this.tile23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tile76
+            // 
+            this.tile76.BackColor = System.Drawing.Color.YellowGreen;
+            this.tile76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tile76.Location = new System.Drawing.Point(868, 369);
+            this.tile76.Margin = new System.Windows.Forms.Padding(3);
+            this.tile76.Name = "tile76";
+            this.tile76.Size = new System.Drawing.Size(45, 45);
+            this.tile76.TabIndex = 85;
+            this.tile76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1145, 640);
             this.Controls.Add(this.tile100);
             this.Controls.Add(this.tile99);
@@ -1395,6 +1439,7 @@
             this.Controls.Add(this.rightButton);
             this.Controls.Add(this.leftButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "GameWindow";
             this.Text = "GrindQuest - Alpha";
             this.ResumeLayout(false);
@@ -1439,8 +1484,6 @@
         private System.Windows.Forms.Label tile26;
         private System.Windows.Forms.Label tile25;
         private System.Windows.Forms.Label tile24;
-        private System.Windows.Forms.Label tile23;
-        private System.Windows.Forms.Label tile22;
         private System.Windows.Forms.Label tile21;
         private System.Windows.Forms.Label tile40;
         private System.Windows.Forms.Label tile39;
@@ -1486,7 +1529,6 @@
         private System.Windows.Forms.Label tile79;
         private System.Windows.Forms.Label tile78;
         private System.Windows.Forms.Label tile77;
-        private System.Windows.Forms.Label tile76;
         private System.Windows.Forms.Label tile75;
         private System.Windows.Forms.Label tile74;
         private System.Windows.Forms.Label tile73;
@@ -1512,6 +1554,9 @@
         private System.Windows.Forms.Label tile53;
         private System.Windows.Forms.Label tile52;
         private System.Windows.Forms.Label tile51;
+        private System.Windows.Forms.Label tile23;
+        private System.Windows.Forms.Label tile76;
+        internal System.Windows.Forms.Label tile22;
     }
 }
 
