@@ -18,12 +18,10 @@ namespace GrindQuest
     public partial class GameWindow : Form
     {
         private readonly TileLogic _tileLogic;
-        public Character playerCharacter { get; set; }
-        public static List<PictureBox> tileList = new List<PictureBox>();
+        public Character PlayerCharacter { get; set; }
+        public static List<Label> tileNames = new List<Label>();
 
-        //haven't figured out how to inject this class without initialising it in the Program.Main() method yet. Doing it in main() only initialises it
-        //once in the lifetime of the program so I can kind of deal with that.
-        public GameWindow()
+        public GameWindow(Character playerCharacter)
         {
             InitializeComponent();
             _tileLogic = (TileLogic)Program.ServiceProvider.GetService(typeof(TileLogic));
@@ -33,174 +31,78 @@ namespace GrindQuest
             rightButton.Text = "\u2192";
             upButton.Text = "\u2191";
             downButton.Text = "\u2193";
-            foreach(Control control in this.Controls)
-            {
-                if (control is PictureBox)
-                {
-                    tileList.Add((PictureBox)control);
-                }
-            }
 
-        }
-        private void MoveCharacterNorth()
-        {
-            foreach(Tile tile in TilesDb.allTiles)
+            foreach (Control c in this.Controls)
             {
-                if(playerCharacter.CurrentTileLocation == tile.TileName)
+                if (c.Name.Contains("tile"))
                 {
-                    PictureBox currentLocation = _tileLogic.GetPictureBoxByName(playerCharacter.CurrentTileLocation);
-                    currentLocation.Dispose();
-                    PictureBox replacementBox = new PictureBox()
-                    {
-                        Name = currentLocation.Name,
-                        Location = currentLocation.Location,
-                        BackColor = currentLocation.BackColor,
-                        Height = currentLocation.Height,
-                        Width = currentLocation.Width,
-                    };
-                    playerCharacter.CurrentTileLocation = tile.NorthTileName;
-                    this.Controls.Add(replacementBox);
-                    break;
-                }
-                else
-                {
-                    upButton.Enabled = false;
+                    tileNames.Add((Label)c);
                 }
             }
+            _tileLogic.GetLabelByTileName(playerCharacter.CurrentTileLocation).Text = "X";
         }
-        private void MoveCharacterSouth()
+        private void MoveCharacterNorth(Label CurrentTile)
         {
-            foreach (Tile tile in TilesDb.allTiles)
+            Tile currentTile = _tileLogic.GetTileByLabelName(CurrentTile.Name);
+            Label northTileLabel = _tileLogic.GetLabelByTileName(currentTile.NorthTileName);
+            if (currentTile.North == true)
             {
-                if (playerCharacter.CurrentTileLocation == tile.TileName)
-                {
-                    PictureBox currentLocation = _tileLogic.GetPictureBoxByName(playerCharacter.CurrentTileLocation);
-                    currentLocation.Dispose();
-                    PictureBox replacementBox = new PictureBox()
-                    {
-                        Name = currentLocation.Name,
-                        Location = currentLocation.Location,
-                        BackColor = currentLocation.BackColor,
-                        Height = currentLocation.Height,
-                        Width = currentLocation.Width,
-                    };
-                    playerCharacter.CurrentTileLocation = tile.SouthTileName;
-                    this.Controls.Add(replacementBox);
-                    break;
-                }
-                else
-                {
-                    downButton.Enabled = false;
-                }
+                PlayerCharacter.CurrentTileLocation = currentTile.NorthTileName;
+                CurrentTile.Text = "";
+                northTileLabel.Text = "X";
             }
         }
-        private void MoveCharacterEast()
+        private void MoveCharacterEast(Label CurrentTile)
         {
-            foreach (Tile tile in TilesDb.allTiles)
+            Tile currentTile = _tileLogic.GetTileByLabelName(CurrentTile.Name);
+            Label EastTileLabel = _tileLogic.GetLabelByTileName(currentTile.EastTileName);
+            if (currentTile.East == true)
             {
-                if (playerCharacter.CurrentTileLocation == tile.TileName)
-                {
-                    PictureBox currentLocation = _tileLogic.GetPictureBoxByName(playerCharacter.CurrentTileLocation);
-                    currentLocation.Dispose();
-                    PictureBox replacementBox = new PictureBox()
-                    {
-                        Name = currentLocation.Name,
-                        Location = currentLocation.Location,
-                        BackColor = currentLocation.BackColor,
-                        Height = currentLocation.Height,
-                        Width = currentLocation.Width,
-                    };
-                    playerCharacter.CurrentTileLocation = tile.EastTileName;
-                    this.Controls.Add(replacementBox);
-                    break;
-                }
-                else
-                {
-                    rightButton.Enabled = false;
-                }
+                PlayerCharacter.CurrentTileLocation = currentTile.EastTileName;
+                CurrentTile.Text = "";
+                EastTileLabel.Text = "X";
             }
         }
-        private void MoveCharacterWest()
+        private void MoveCharacterSouth(Label CurrentTile)
         {
-            foreach (Tile tile in TilesDb.allTiles)
+            Tile currentTile = _tileLogic.GetTileByLabelName(CurrentTile.Name);
+            Label southTileLabel = _tileLogic.GetLabelByTileName(currentTile.SouthTileName);
+            if (currentTile.South == true)
             {
-                if (playerCharacter.CurrentTileLocation == tile.TileName & tile.West == true)
-                {
-                    PictureBox currentLocation = _tileLogic.GetPictureBoxByName(playerCharacter.CurrentTileLocation);
-                    currentLocation.Dispose();
-                    PictureBox replacementBox = new PictureBox()
-                    {
-                        Name = currentLocation.Name,
-                        Location = currentLocation.Location,
-                        BackColor = currentLocation.BackColor,
-                        Height = currentLocation.Height,
-                        Width = currentLocation.Width,
-                    };
-                    playerCharacter.CurrentTileLocation = tile.WestTileName;
-                    this.Controls.Add(replacementBox);
-                    break;
-                }
-                else
-                {
-                    leftButton.Enabled = false;
-                }
+                PlayerCharacter.CurrentTileLocation = currentTile.SouthTileName;
+                CurrentTile.Text = "";
+                southTileLabel.Text = "X";
             }
         }
-        private void MarkNewCharacterLocation(string tileName)
+        private void MoveCharacterWest(Label CurrentTile)
         {
-            PictureBox currentLocation = _tileLogic.GetPictureBoxByName(tileName);
-            currentLocation.Invalidate();
-        }
-        private void MarkCharacterLocationOnLoad(object sender, PaintEventArgs e)
-        {
-            var currentPlayerLocation = (PictureBox)sender;
-            if (currentPlayerLocation.Name == playerCharacter.CurrentTileLocation)
+            Tile currentTile = _tileLogic.GetTileByLabelName(CurrentTile.Name);
+            Label westTileLabel = _tileLogic.GetLabelByTileName(currentTile.WestTileName);
+            if (currentTile.West == true)
             {
-                using (Font myFont = new Font("Arial", 14))
-                {
-                    e.Graphics.DrawString("X", myFont, Brushes.Black, new Point(2, 2));
-                }
+                PlayerCharacter.CurrentTileLocation = currentTile.WestTileName;
+                CurrentTile.Text = "";
+                westTileLabel.Text = "X";
             }
         }
 
-        private void upButton_Click(object sender, EventArgs e)
+        private void UpButton_Click(object sender, EventArgs e)
         {
-            MoveCharacterNorth();
-            MarkNewCharacterLocation(playerCharacter.CurrentTileLocation);
-            Debug.WriteLine(playerCharacter.CurrentTileLocation);
+            MoveCharacterNorth(_tileLogic.GetLabelByTileName(PlayerCharacter.CurrentTileLocation));
         }
 
-        private void rightButton_Click(object sender, EventArgs e)
+        private void RightButton_Click(object sender, EventArgs e)
         {
-            MoveCharacterEast();
-            MarkNewCharacterLocation(playerCharacter.CurrentTileLocation);
+            MoveCharacterEast(_tileLogic.GetLabelByTileName(PlayerCharacter.CurrentTileLocation));
+        }
+        private void DownButton_Click(object sender, EventArgs e)
+        {
+            MoveCharacterSouth(_tileLogic.GetLabelByTileName(PlayerCharacter.CurrentTileLocation));
         }
 
-        private void leftButton_Click(object sender, EventArgs e)
+        private void LeftButton_Click(object sender, EventArgs e)
         {
-            MoveCharacterWest();
-            MarkNewCharacterLocation(playerCharacter.CurrentTileLocation);
+            MoveCharacterWest(_tileLogic.GetLabelByTileName(PlayerCharacter.CurrentTileLocation));
         }
-
-        private void downButton_Click(object sender, EventArgs e)
-        {
-            MoveCharacterSouth();
-            MarkNewCharacterLocation(playerCharacter.CurrentTileLocation);
-        }
-
-
-
-
-        //private void AddTileToPictureBox(object sender, EventArgs e)
-        //{
-        //    var tile = (PictureBox)sener;
-        //    if (tile.Name == playerCharacter.CurrentTileLocation)
-        //    {
-        //        using (Font myFont = new Font("Arial", 14))
-        //        {
-        //            e.Graphics.DrawString("X", myFont, Brushes.Black, new Point(2, 2));
-        //        }
-        //    }
-        //}
     }
 }

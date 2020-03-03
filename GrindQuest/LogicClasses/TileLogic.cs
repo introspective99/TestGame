@@ -1,4 +1,6 @@
-﻿using GrindQuest.Interfaces;
+﻿using GrindQuest.Databases;
+using GrindQuest.Interfaces;
+using GrindQuest.ObjectModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +12,30 @@ namespace GrindQuest.LogicClasses
 {
     public class TileLogic : ITileLogic
     {
-        public PictureBox GetPictureBoxByName(string tileName)
+        public Label GetLabelByTileName(string tileName)
         {
-            foreach(PictureBox tile in GameWindow.tileList)
+            foreach (Label tile in GameWindow.tileNames)
             {
-                if(tile.Name == tileName)
+                if (tile.Name == tileName)
                 {
                     return tile;
                 }
             }
             return null;
+        }
+
+        public Tile GetTileByLabelName(string tileName)
+        {
+            Tile selectedTile = new Tile();
+
+            foreach(Tile tile in TilesDb.allTiles)
+            {
+                if(tile.TileName == tileName)
+                {
+                    selectedTile = tile;
+                }
+            }
+            return selectedTile;
         }
     }
 }

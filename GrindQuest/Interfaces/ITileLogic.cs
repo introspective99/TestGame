@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrindQuest.ObjectModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace GrindQuest.Interfaces
 {
     interface ITileLogic
     {
-        PictureBox GetPictureBoxByName(string pictureBoxName);
+        Tile GetTileByLabelName(string tileName);
+        Label GetLabelByTileName(string tileName);
     }
 }

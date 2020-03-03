@@ -28,7 +28,7 @@ namespace GrindQuest.LogicClasses
                     CharacterIntellect = 1,
                     CharacterAgility = 1,
                     CharacterSpeed = 1,
-                    CurrentTileLocation = "jTwo",
+                    CurrentTileLocation = "tile1",
                 };
                 _characterMasterDbActionsRepo.InsertCharacterToCharacterMasterDb(newCharacter);
         }

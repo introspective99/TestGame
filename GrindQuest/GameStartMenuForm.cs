@@ -230,8 +230,8 @@ namespace GrindQuest
                     break;
             };   
 
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.playerCharacter = selectedCharacter;
+            GameWindow gameWindow = new GameWindow(selectedCharacter);
+            gameWindow.PlayerCharacter = selectedCharacter;
             this.Hide();
             gameWindow.Show();
         }
