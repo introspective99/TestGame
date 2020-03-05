@@ -102,7 +102,6 @@ namespace GrindQuest
 
         private void ConfirmCharacterCreationButton_Click(object sender, EventArgs e)
         {
-
             if (!String.IsNullOrEmpty(characterNameInputTextBox.Text))
             {
                 if (_characterLogic.CheckForOpenSaveSpaces().Equals(true))
@@ -126,7 +125,6 @@ namespace GrindQuest
                         goldLabels[counter].Text = character.CharacterGold.ToString();
                         deleteButtons[counter].Enabled = true;
                         loadButtonList[counter].Enabled = true;
-
                         counter++;
                     }
 
@@ -134,14 +132,12 @@ namespace GrindQuest
                     startMenuPanel.Hide();
                     this.Size = loadCharacterFormSize;
                     loadCharacterPanel.Show();
-
                 }
                 else if (_characterLogic.CheckForOpenSaveSpaces().Equals(false))
                 {
                     MessageBox.Show("Not Enough Character Spaces, delete one to make room");
                 }
             }
-
         }
 
         private void SlotOneDeleteButton_Click(object sender, EventArgs e)
@@ -157,7 +153,7 @@ namespace GrindQuest
                 slotOneLevelLabel.Text = "0";
                 slotOneGoldLabel.Text = "0";
                 slotOneDeleteButton.Enabled = false;
-                this.Refresh();
+                //loadSlotOneButton.Enabled = false;
             }
         }
 
@@ -174,7 +170,7 @@ namespace GrindQuest
                 slotTwoLevelLabel.Text = "0";
                 slotTwoGoldLabel.Text = "0";
                 slotTwoDeleteButton.Enabled = false;
-                this.Refresh();
+                //loadSlotTwoButton.Enabled = false;
             }
         }
         private void SlotThreeDeleteButton_Click(object sender, EventArgs e)
@@ -190,7 +186,7 @@ namespace GrindQuest
                 slotThreeLevelLabel.Text = "0";
                 slotThreeGoldLabel.Text = "0";
                 slotThreeDeleteButton.Enabled = false;
-                this.Refresh();
+                //loadSlotThreeButton.Enabled = false;
             }
         }
         private void SlotFourDeleteButton_Click(object sender, EventArgs e)
@@ -206,10 +202,9 @@ namespace GrindQuest
                 slotFourLevelLabel.Text = "0";
                 slotFourGoldLabel.Text = "0";
                 slotFourDeleteButton.Enabled = false;
-                this.Refresh();
+                //loadSlotFourButton.Enabled = false;
             }
         }
-
         private void LoadSelectedCharacter(object sender, EventArgs e)
         {
             var clickedButtonName = (Button)sender;

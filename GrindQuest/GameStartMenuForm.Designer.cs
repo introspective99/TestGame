@@ -398,6 +398,7 @@
             // 
             // loadSlotFourButton
             // 
+            this.loadSlotFourButton.Enabled = false;
             this.loadSlotFourButton.Location = new System.Drawing.Point(163, 254);
             this.loadSlotFourButton.Name = "loadSlotFourButton";
             this.loadSlotFourButton.Size = new System.Drawing.Size(50, 30);
@@ -405,7 +406,6 @@
             this.loadSlotFourButton.Text = "->";
             this.loadSlotFourButton.UseVisualStyleBackColor = true;
             this.loadSlotFourButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
-            this.loadSlotFourButton.Enabled = false;
             // 
             // slotThreeGoldLabel
             // 
@@ -457,6 +457,7 @@
             // 
             // loadSlotThreeButton
             // 
+            this.loadSlotThreeButton.Enabled = false;
             this.loadSlotThreeButton.Location = new System.Drawing.Point(161, 191);
             this.loadSlotThreeButton.Name = "loadSlotThreeButton";
             this.loadSlotThreeButton.Size = new System.Drawing.Size(50, 30);
@@ -464,7 +465,6 @@
             this.loadSlotThreeButton.Text = "->";
             this.loadSlotThreeButton.UseVisualStyleBackColor = true;
             this.loadSlotThreeButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
-            this.loadSlotThreeButton.Enabled = false;
             // 
             // slotTwoGoldLabel
             // 
@@ -516,6 +516,7 @@
             // 
             // loadSlotTwoButton
             // 
+            this.loadSlotTwoButton.Enabled = false;
             this.loadSlotTwoButton.Location = new System.Drawing.Point(161, 125);
             this.loadSlotTwoButton.Name = "loadSlotTwoButton";
             this.loadSlotTwoButton.Size = new System.Drawing.Size(50, 30);
@@ -523,7 +524,6 @@
             this.loadSlotTwoButton.Text = "->";
             this.loadSlotTwoButton.UseVisualStyleBackColor = true;
             this.loadSlotTwoButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
-            this.loadSlotTwoButton.Enabled = false;
             // 
             // slotOneGoldLabel
             // 
@@ -575,6 +575,7 @@
             // 
             // loadSlotOneButton
             // 
+            this.loadSlotOneButton.Enabled = false;
             this.loadSlotOneButton.Location = new System.Drawing.Point(161, 58);
             this.loadSlotOneButton.Name = "loadSlotOneButton";
             this.loadSlotOneButton.Size = new System.Drawing.Size(50, 30);
@@ -582,7 +583,6 @@
             this.loadSlotOneButton.Text = "->";
             this.loadSlotOneButton.UseVisualStyleBackColor = true;
             this.loadSlotOneButton.Click += new System.EventHandler(this.LoadSelectedCharacter);
-            this.loadSlotOneButton.Enabled = false;
             // 
             // loadCharacterLabel
             // 
