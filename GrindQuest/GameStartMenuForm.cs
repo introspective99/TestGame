@@ -153,7 +153,7 @@ namespace GrindQuest
                 slotOneLevelLabel.Text = "0";
                 slotOneGoldLabel.Text = "0";
                 slotOneDeleteButton.Enabled = false;
-                //loadSlotOneButton.Enabled = false;
+                loadSlotOneButton.Enabled = false;
             }
         }
 
@@ -170,7 +170,7 @@ namespace GrindQuest
                 slotTwoLevelLabel.Text = "0";
                 slotTwoGoldLabel.Text = "0";
                 slotTwoDeleteButton.Enabled = false;
-                //loadSlotTwoButton.Enabled = false;
+                loadSlotTwoButton.Enabled = false;
             }
         }
         private void SlotThreeDeleteButton_Click(object sender, EventArgs e)
@@ -186,7 +186,7 @@ namespace GrindQuest
                 slotThreeLevelLabel.Text = "0";
                 slotThreeGoldLabel.Text = "0";
                 slotThreeDeleteButton.Enabled = false;
-                //loadSlotThreeButton.Enabled = false;
+                loadSlotThreeButton.Enabled = false;
             }
         }
         private void SlotFourDeleteButton_Click(object sender, EventArgs e)
@@ -202,7 +202,7 @@ namespace GrindQuest
                 slotFourLevelLabel.Text = "0";
                 slotFourGoldLabel.Text = "0";
                 slotFourDeleteButton.Enabled = false;
-                //loadSlotFourButton.Enabled = false;
+                loadSlotFourButton.Enabled = false;
             }
         }
         private void LoadSelectedCharacter(object sender, EventArgs e)
